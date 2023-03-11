@@ -1,0 +1,511 @@
+ERROR - 2023-02-26 10:11:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'ranu', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-02-26 10:12:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(11) NOT NULL,
+	`bobot` INT(2) NOT NULL,
+	C...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022043_Kriteria.php(27): CodeIgniter\Database\Forge->createTable('kriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Kriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:13:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(11) NOT NULL,
+	`bobot` INT(2) NOT NULL,
+	C...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022043_Kriteria.php(27): CodeIgniter\Database\Forge->createTable('kriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Kriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:15:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(11) NOT NULL,
+	`bobot` INT(2) NOT NULL,
+	C...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022043_Kriteria.php(27): CodeIgniter\Database\Forge->createTable('kriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Kriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:16:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(11) NOT NULL,
+	`bobot` INT(2) NOT NULL,
+	C...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022043_Kriteria.php(27): CodeIgniter\Database\Forge->createTable('kriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Kriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:21:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(15) NOT NULL,
+	`nilai` INT(2) NOT NULL,
+	C...' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:22:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(15) NOT NULL,
+	`nilai` INT(2) NOT NULL,
+	C...' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:24:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR UNSIGNED NOT NULL,
+	`nama` VARCHAR(...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:26:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR UNSIGNED NOT NULL,
+	`nama` VARCHAR(...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:27:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR UNSIGNED NOT NULL,
+	`nama` VARCHAR(...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:28:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR NOT NULL,
+	`nama` VARCHAR(15) NOT N...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:28:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VARCHAR(15) NOT NULL,
+	`nilai` INT(2) NOT NULL,
+	C...' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:32:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR UNSIGNED NOT NULL,
+	`nama` VARCHAR(...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:33:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR UNSIGNED NOT NULL,
+	`nama` VARCHAR(...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(32): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:33:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR(5) UNSIGNED NOT NULL,
+	`nama` VARCH...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:34:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`kd_kriteria` VARCHAR(5) UNSIGNED NOT NULL,
+	`nama` VARCH...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-022636_Subkriteria.php(33): CodeIgniter\Database\Forge->createTable('subkriteria')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Subkriteria->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:41:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`jenis` VARCHAR(5) NOT NULL,
+	CONSTRAINT `pk_jenisProduk`...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `j...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `j...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `j...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `j...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023243_JenisProduk.php(23): CodeIgniter\Database\Forge->createTable('jenisProduk')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\JenisProduk->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:42:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023303_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:45:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023303_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:47:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023303_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:48:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023303_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:48:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023303_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:48:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023303_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:51:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(30) NOT NULL,
+	`alamat` VACRHAR(100) NOT NULL,
+	`telp` VACRHAR(16) NOT NULL,...' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023319_Konsumen.php(34): CodeIgniter\Database\Forge->createTable('konsumen')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Konsumen->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:53:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nama` VACRHAR(30) NOT NULL,
+	`alamat` VACRHAR(100) NOT N...' at line 2 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023319_Konsumen.php(34): CodeIgniter\Database\Forge->createTable('konsumen')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Konsumen->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:53:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(30) NOT NULL,
+	`alamat` VACRHAR(100) NOT NULL,
+	`telp` VACRHAR(16) NOT NULL,...' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023319_Konsumen.php(34): CodeIgniter\Database\Forge->createTable('konsumen')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Konsumen->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:56:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(30) NOT NULL,
+	`alamat` VACRHAR(100) NOT NULL,
+	`telp` VACRHAR(16) NOT NULL,...' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `k...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023319_Konsumen.php(34): CodeIgniter\Database\Forge->createTable('konsumen')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Konsumen->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 10:56:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(2) NOT NULL,
+	CONSTRAINT `pk_produk` PRIMARY KEY(`kd_produk`),
+	CONSTRAINT `...' at line 9 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-023358_Produk.php(49): CodeIgniter\Database\Forge->createTable('produk')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Produk->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 11:03:40 --> mysqli_sql_exception: Can't create table `ranu`.`pilihan` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-095717_Pilihan.php(37): CodeIgniter\Database\Forge->createTable('pilihan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pilihan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 11:04:39 --> mysqli_sql_exception: Can't create table `ranu`.`pilihan` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-095717_Pilihan.php(37): CodeIgniter\Database\Forge->createTable('pilihan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pilihan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-02-26 11:06:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(7) NOT NULL,
+	CONSTRAINT `pk_pesanan` PRIMARY KEY(`kd_pesanan`),
+	CONSTRAINT...' at line 7 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\htdocs\ci4\ranu\app\Database\Migrations\2023-02-26-105056_Pesanan.php(42): CodeIgniter\Database\Forge->createTable('pesanan')
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(877): App\Database\Migrations\Pesanan->up()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}

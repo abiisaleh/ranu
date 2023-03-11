@@ -1,0 +1,8 @@
+CRITICAL - 2023-03-11 08:25:28 --> strip_tags(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\admin\Kriteria.php on line 55.
+ 1 APPPATH\Controllers\admin\Kriteria.php(55): strip_tags([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Kriteria->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kriteria))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

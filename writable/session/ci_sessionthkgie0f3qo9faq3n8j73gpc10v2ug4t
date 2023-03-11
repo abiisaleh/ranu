@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1677753716;_ci_previous_url|s:51:"http://localhost:8080/index.php/admin/produk/form/3";failed|a:3:{s:5:"merek";s:28:"The merek field is required.";s:5:"model";s:28:"The model field is required.";s:5:"harga";s:28:"The harga field is required.";}__ci_vars|a:1:{s:6:"failed";s:3:"new";}

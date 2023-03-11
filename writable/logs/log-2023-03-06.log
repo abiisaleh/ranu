@@ -1,0 +1,105 @@
+ERROR - 2023-03-06 11:01:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ranu', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\ShowTableInfo.php(103): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\ShowTableInfo.php(103): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#7 {main}
+CRITICAL - 2023-03-06 11:01:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `ranu`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(103): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+ERROR - 2023-03-06 11:01:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ranu', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\ShowTableInfo.php(103): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\ShowTableInfo.php(103): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#7 {main}
+CRITICAL - 2023-03-06 11:01:21 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `ranu`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(103): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-03-06 11:07:34 --> Undefined variable $Produk
+in APPPATH\Views\pages\admin\kriteria.php on line 54.
+ 1 APPPATH\Views\pages\admin\kriteria.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Produk', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\admin\Kriteria.php(27): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Kriteria->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kriteria))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-06 15:07:25 --> Undefined variable $konsumen
+in APPPATH\Views\pages\admin\dashboard.php on line 25.
+ 1 APPPATH\Views\pages\admin\dashboard.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konsumen', 'APPPATH\\Views\\pages\\admin\\dashboard.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\Dashboard.php(17): view('pages/admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-06 15:07:39 --> Undefined variable $konsumen
+in APPPATH\Views\pages\admin\dashboard.php on line 25.
+ 1 APPPATH\Views\pages\admin\dashboard.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konsumen', 'APPPATH\\Views\\pages\\admin\\dashboard.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\Dashboard.php(17): view('pages/admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-06 15:08:04 --> Call to a member function countAll() on null
+in APPPATH\Controllers\admin\Dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

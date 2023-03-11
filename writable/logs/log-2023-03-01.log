@@ -1,0 +1,1494 @@
+ERROR - 2023-03-01 04:21:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'ranu', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-03-01 04:21:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jenisproduk`', [], false)
+ 3 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 04:23:16 --> mysqli_sql_exception: Table 'ranu.jenisproduk' doesn't exist in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 04:23:16 --> Table 'ranu.jenisproduk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jenisproduk`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 04:23:17 --> mysqli_sql_exception: Table 'ranu.jenisproduk' doesn't exist in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 04:23:17 --> Table 'ranu.jenisproduk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jenisproduk`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 04:23:27 --> mysqli_sql_exception: Table 'ranu.jenisproduk' doesn't exist in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 04:23:27 --> Table 'ranu.jenisproduk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jenisproduk`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 04:23:31 --> mysqli_sql_exception: Table 'ranu.jenisproduk' doesn't exist in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 04:23:31 --> Table 'ranu.jenisproduk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jenisproduk`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 04:23:34 --> mysqli_sql_exception: Table 'ranu.jenisproduk' doesn't exist in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->produk()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 04:23:34 --> Table 'ranu.jenisproduk' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jenisproduk`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(30): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 04:25:12 --> mysqli_sql_exception: Table 'ranu.jenisproduk' doesn't exist in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `je...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `je...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `je...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('INSERT INTO `je...', NULL, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(2178): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ci4\ranu\app\Database\Seeds\JenisProduk.php(23): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Seeder.php(146): App\Database\Seeds\JenisProduk->run()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-03-01 04:25:27 --> mysqli_sql_exception: Unknown column 'jenis' in 'field list' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `je...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `je...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `je...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('INSERT INTO `je...', NULL, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(2178): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\ci4\ranu\app\Database\Seeds\JenisProduk.php(23): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\Seeder.php(146): App\Database\Seeds\JenisProduk->run()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\ci4\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2023-03-01 04:47:01 --> syntax error, unexpected token ";"
+in APPPATH\Views\pages\admin\produk.php on line 26.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/produk', [], true)
+ 3 APPPATH\Controllers\Admin.php(32): view('pages/admin/produk', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 04:47:12 --> syntax error, unexpected token "}"
+in APPPATH\Views\pages\admin\produk.php on line 28.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/produk', [], true)
+ 3 APPPATH\Controllers\Admin.php(32): view('pages/admin/produk', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 04:47:30 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\pages\admin\produk.php on line 28.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/produk', [], true)
+ 3 APPPATH\Controllers\Admin.php(32): view('pages/admin/produk', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:13:23 --> Class "App\Models\Kriteria" not found
+in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:15:16 --> Undefined property: App\Controllers\Admin::$kriteria
+in APPPATH\Controllers\Admin.php on line 41.
+ 1 APPPATH\Controllers\Admin.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$kriteria', 'APPPATH\\Controllers\\Admin.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:22:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:22:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+JOIN `jenis` USING (`jenis`.`id`)', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:22:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:22:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+JOIN `jenis` USING (`jenis`.`id`)', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:22:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:22:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:22:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+JOIN `jenis` USING (`jenis`.`id`)', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:34:17 --> mysqli_sql_exception: Unknown column 'jenis.id' in 'on clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:34:17 --> Unknown column 'jenis.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+RIGHT JOIN `jenis` as `j` ON `jenis`.`id` = `fkJenis`', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:35:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `jenis`' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:35:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `jenis`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis jenis`.`nama` as `jenis`', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:35:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `namas`' at line 3 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:35:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `namas`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis` as `namas`', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:55:10 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:56:01 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:56:17 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:56:22 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:56:42 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 06:56:48 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 31.
+ 1 APPPATH\Views\pages\admin\kriteria.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(43): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 06:59:20 --> mysqli_sql_exception: Unknown column '* kriteria.nama' in 'field list' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `* krite...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `* krite...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `* krite...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `* krite...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 06:59:20 --> Unknown column '* kriteria.nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `* kriteria`.`nama` as `nama`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 07:00:28 --> mysqli_sql_exception: Column 'nama' in field list is ambiguous in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nama`, ...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`, ...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`, ...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, ...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 07:00:28 --> Column 'nama' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, `bobot`, `jenis`.`nama` `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 07:00:32 --> mysqli_sql_exception: Column 'nama' in field list is ambiguous in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nama`, ...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`, ...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`, ...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, ...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 07:00:32 --> Column 'nama' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 07:00:33 --> mysqli_sql_exception: Column 'nama' in field list is ambiguous in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nama`, ...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`, ...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`, ...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, ...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 07:00:33 --> Column 'nama' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 07:00:37 --> mysqli_sql_exception: Column 'nama' in field list is ambiguous in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nama`, ...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`, ...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`, ...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, ...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 07:00:37 --> Column 'nama' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 08:57:36 --> syntax error, unexpected end of file
+in APPPATH\Views\pages\admin\kriteria.php on line 75.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 3 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 08:58:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\pages\admin\kriteria.php on line 33.
+ 1 APPPATH\Views\pages\admin\kriteria.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:00:09 --> mysqli_sql_exception: Unknown column 'jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:00:09 --> Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis` = `jenis`.`nama`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:00:22 --> mysqli_sql_exception: Unknown column 'kriteria.jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:00:22 --> Unknown column 'kriteria.jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `kriteria`.`jenis` = `jenis`.`nama`', [], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:01:01 --> mysqli_sql_exception: Unknown column 'jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:01:01 --> Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis` = :jenis:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:01:05 --> mysqli_sql_exception: Column 'nama' in where clause is ambiguous in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:01:05 --> Column 'nama' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `nama` = :nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:01:11 --> mysqli_sql_exception: Unknown column 'jenis.nama' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:01:11 --> Unknown column 'jenis.nama' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+WHERE `jenis`.`nama` = :jenis.nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:01:27 --> mysqli_sql_exception: Unknown column 'kriteria.jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:01:27 --> Unknown column 'kriteria.jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `kriteria`.`jenis` = :kriteria.jenis:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:05:04 --> mysqli_sql_exception: Unknown column 'jenis.nama' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:05:04 --> Unknown column 'jenis.nama' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+WHERE `jenis`.`nama` = :jenis.nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:05:17 --> mysqli_sql_exception: Column 'nama' in where clause is ambiguous in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:05:17 --> Column 'nama' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `nama` = :nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:05:23 --> mysqli_sql_exception: Unknown column 'jenis.nama' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:05:23 --> Unknown column 'jenis.nama' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+WHERE `jenis`.`nama` = :jenis.nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:05:26 --> mysqli_sql_exception: Unknown column 'jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:05:26 --> Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis` = :jenis:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:05:32 --> mysqli_sql_exception: Unknown column 'jenis.nama' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:05:32 --> Unknown column 'jenis.nama' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+WHERE `jenis`.`nama` = :jenis.nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:05:48 --> mysqli_sql_exception: Unknown column 'jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:05:48 --> Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis` = :jenis:', [...], false)
+ 2 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:06:50 --> mysqli_sql_exception: Unknown column 'jenis' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 09:06:50 --> Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis` = AC', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:06:57 --> mysqli_sql_exception: Unknown column 'AC' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 09:06:57 --> Unknown column 'AC' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis`.`nama` = AC', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:07:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= AC' at line 4 in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 09:07:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= AC' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis`.`nama` = = AC', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:07:07 --> mysqli_sql_exception: Unknown column 'AC' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `kriteri...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kriteri...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kriteri...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteri...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-03-01 09:07:07 --> Unknown column 'AC' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `kriteria`.`id`, `kriteria`.`nama`, `bobot`, `jenis`.`nama` as `jenis`
+FROM `kriteria`
+JOIN `jenis` ON `jenis`.`id` = `fkJenis`
+WHERE `jenis`.`nama` = AC', [], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\Admin.php(42): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-01 09:07:51 --> mysqli_sql_exception: Unknown column 'jenis.nama' in 'where clause' in C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\CodeIgniter4\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\CodeIgniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\ci4\CodeIgniter4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\ci4\CodeIgniter4\system\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kri...', Array, true)
+#10 C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php(44): view('pages/admin/kri...', Array)
+#11 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+#12 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#13 C:\xampp\htdocs\ci4\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-01 09:07:51 --> Unknown column 'jenis.nama' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kriteria`
+WHERE `jenis`.`nama` = :jenis.nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 8 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:14:27 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\pages\admin\kriteria.php on line 27.
+ 1 APPPATH\Views\pages\admin\kriteria.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:14:41 --> Call to a member function find() on null
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:15:03 --> Call to a member function find() on null
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:15:06 --> Call to a member function find() on null
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:15:54 --> Too few arguments to function App\Models\Kriteria::kriteriaJenis(), 0 passed in C:\xampp\htdocs\ci4\ranu\app\Controllers\Admin.php on line 42 and exactly 1 expected
+in APPPATH\Models\Kriteria.php on line 43.
+ 1 APPPATH\Controllers\Admin.php(42): App\Models\Kriteria->kriteriaJenis()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:16:08 --> Call to a member function find() on null
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:16:22 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::find()
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:16:53 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:17:11 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::find()
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:17:20 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\kriteria.php on line 33.
+ 1 APPPATH\Views\pages\admin\kriteria.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\kriteria.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:18:13 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::find()
+in APPPATH\Controllers\Admin.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:27:53 --> Too few arguments to function App\Models\Kriteria::kriteriaJenis(), 0 passed in C:\xampp\htdocs\ci4\ranu\app\Views\pages\admin\kriteria.php on line 28 and exactly 1 expected
+in APPPATH\Models\Kriteria.php on line 43.
+ 1 APPPATH\Views\pages\admin\kriteria.php(28): App\Models\Kriteria->kriteriaJenis()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\kriteria.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/kriteria', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('pages/admin/kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->kriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:43:11 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\produk.php on line 31.
+ 1 APPPATH\Views\pages\admin\produk.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\produk.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\produk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/produk', [], true)
+ 5 APPPATH\Controllers\Admin.php(35): view('pages/admin/produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 09:44:18 --> Undefined array key "nama"
+in APPPATH\Views\pages\admin\produk.php on line 34.
+ 1 APPPATH\Views\pages\admin\produk.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Views\\pages\\admin\\produk.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\produk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/produk', [], true)
+ 5 APPPATH\Controllers\Admin.php(35): view('pages/admin/produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:00:25 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:01:06 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:01:28 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:01:36 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:01:56 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:02:04 --> Object of class App\Controllers\Admin could not be converted to string
+in APPPATH\Controllers\Admin.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:02:22 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:02:36 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->find()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-01 11:02:58 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, json given
+in SYSTEMPATH\Database\MySQLi\Result.php on line 152.
+ 1 SYSTEMPATH\Database\MySQLi\Result.php(152): mysqli_result->fetch_object('json')
+ 2 SYSTEMPATH\Database\BaseResult.php(156): CodeIgniter\Database\MySQLi\Result->fetchObject('json')
+ 3 SYSTEMPATH\Database\BaseResult.php(113): CodeIgniter\Database\BaseResult->getCustomResultObject('json')
+ 4 SYSTEMPATH\Database\BaseResult.php(384): CodeIgniter\Database\BaseResult->getResult('json')
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseResult->getFirstRow('json')
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->produk()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
