@@ -5,16 +5,19 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\JenisModel;
 use App\Models\KriteriaModel;
+use App\Models\SubkriteriaModel;
 
 class Kriteria extends BaseController
 {
     protected $jenisModel;
     protected $kriteriaModel;
+    protected $subkriteriaModel;
 
     public function __construct()
     {
         $this->jenisModel = new JenisModel();
         $this->kriteriaModel = new KriteriaModel();
+        $this->subkriteriaModel = new SubkriteriaModel();
     }
 
     public function index()
@@ -23,9 +26,8 @@ class Kriteria extends BaseController
         $data = [
             'title' => 'Kriteria',
             'jenis' => $this->jenisModel->findAll(),
-            'kriteria' => $this->kriteriaModel,
         ];
-        return view('pages/admin/kriteria', $data);
+        return view('pages/admin/kriteria/index', $data);
     }
 
     public function get_data()
@@ -35,11 +37,12 @@ class Kriteria extends BaseController
 
             $data = [
                 'Jenis' => $this->jenisModel->find($id),
-                'kriteria' => $this->kriteriaModel
+                'kriteria' => $this->kriteriaModel->where('fkjenis', $id)->find(),
+                'subkriteria' => $this->subkriteriaModel,
             ];
 
             $result = [
-                'output' => view('pages/admin/tabelKriteria', $data)
+                'output' => view('pages/admin/kriteria/tabel', $data)
             ];
             echo json_encode($result);
         } else {
@@ -51,10 +54,32 @@ class Kriteria extends BaseController
     {
         if ($this->request->isAjax()) {
             $data = $this->request->getVar();
-            $this->kriteriaModel->insert($data);
+            $this->kriteriaModel->save($data);
+
+            $result = [
+                'success' => 'Data has been added to database'
+            ];
+
+            echo json_encode($result);
         } else {
             exit('404 Not Found');
         }
+    }
+
+    public function edit()
+    {
+        helper('form');
+
+        $id = $this->request->getVar('id');
+        $data = [
+            'kriteria' => $this->kriteriaModel->find($id)
+        ];
+
+        $result = [
+            'output' => view('pages/admin/kriteria/modal-edit', $data),
+        ];
+
+        echo json_encode($result);
     }
 
     public function delete()
@@ -62,6 +87,132 @@ class Kriteria extends BaseController
         if ($this->request->isAjax()) {
             $id = $this->request->getVar('id');
             $this->kriteriaModel->delete($id);
+
+            $result = [
+                'output' => "Data has been deleted from database",
+            ];
+
+            echo json_encode($result);
+        } else {
+            exit('404 Not Found');
+        }
+    }
+
+    public function subkriteria($id)
+    {
+        helper('form');
+        $data = [
+            'title' => 'subkriteria',
+            'jenis' => $this->jenisModel->find($id)['nama'],
+            'kriteria' => $this->kriteriaModel->where('fkJenis', $id)->find()
+        ];
+
+        return view('pages/admin/kriteria/subkriteria/index', $data);
+    }
+
+    public function get_subkriteria()
+    {
+        if ($this->request->isAJAX()) {
+            $id = $this->request->getVar('id');
+
+            $data = [
+                'kriteria' => $this->kriteriaModel->find($id),
+                'subkriteria' => $this->subkriteriaModel->where('fkKriteria', $id)->find()
+            ];
+
+            $result = [
+                'output' => view('pages/admin/kriteria/subkriteria/tabel', $data)
+            ];
+
+            echo json_encode($result);
+        } else {
+            exit('404 Not Found');
+        }
+    }
+
+    public function create_subkriteria()
+    {
+        if ($this->request->isAJAX()) {
+            $validation = \Config\Services::validation();
+
+            $rules = $this->validate([
+                'nama' => [
+                    'label' => 'subkriteria',
+                    'rules' => 'required',
+                ],
+                'nilai' => [
+                    'label' => 'nilai',
+                    'rules' => 'required|numeric',
+                ],
+            ]);
+
+            if (!$rules) {
+                $result = [
+                    'error' => [
+                        'nama' => $validation->getError('nama'),
+                        'nilai' => $validation->getError('nilai'),
+                    ]
+                ];
+            } else {
+                $data = $this->request->getVar();
+                $this->subkriteriaModel->save($data);
+
+                $result = [
+                    'success' => 'Data has been added to database'
+                ];
+            }
+            echo json_encode($result);
+        } else {
+            exit('404 Not Found');
+        }
+    }
+
+    public function get_modalEdit()
+    {
+        helper('form');
+
+        $id = $this->request->getVar('id');
+        $data = [
+            'subkriteria' => $this->subkriteriaModel->find($id)
+        ];
+
+        $result = [
+            'output' => view('pages/admin/kriteria/subkriteria/modal-edit', $data),
+        ];
+
+        echo json_encode($result);
+    }
+
+    public function update_subkriteria()
+    {
+        if ($this->request->isAjax()) {
+
+            helper('form');
+            $data = $this->request->getVar();
+            $this->subkriteriaModel->save($data);
+            
+            $result = [
+                'success' => "Data has been updated from database"
+            ];
+            
+            echo json_encode($result);
+        } else {
+            exit('404 Not Found');
+        }
+
+    }
+
+    public function delete_subkriteria()
+    {
+        if ($this->request->isAjax()) {
+            $id = $this->request->getVar('id');
+            $this->subkriteriaModel->delete($id);
+
+            $result = [
+                'output' => "Data has been deleted from database"
+            ];
+
+            echo json_encode($result);
         } else {
             exit('404 Not Found');
         }

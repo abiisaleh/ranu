@@ -14,7 +14,7 @@ class KriteriaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama','bobot','fkJenis'];
+    protected $allowedFields    = ['nama', 'bobot', 'fkJenis', 'utility'];
 
     // Dates
     protected $useTimestamps = false;
@@ -39,13 +39,4 @@ class KriteriaModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function kriteriaJenis($jenis)
-    {
-        return $this->table('kriteria')
-                    ->join('jenis','jenis.id = fkJenis')
-                    ->select('kriteria.id,kriteria.nama,bobot,jenis.nama as jenis')
-                    ->where('jenis.nama',$jenis)
-                    ->find();
-    }
 }

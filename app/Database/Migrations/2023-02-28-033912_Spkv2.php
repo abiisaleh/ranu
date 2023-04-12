@@ -38,6 +38,10 @@ class Spkv2 extends Migration
                 'type' => 'INT',
                 'constraint' => 2,
             ],
+            'utility' => [
+                'type' => 'ENUM',
+                'constraint' => ['lebih kecil lebih baik','lebih besar lebih baik'],
+            ],
             'fkJenis' => [
                 'type' => 'INT',
                 'constraint' => 5
@@ -174,7 +178,7 @@ class Spkv2 extends Migration
         $this->forge->addForeignKey('fkKonsumen', 'konsumen', 'id', 'NULL', 'CASCADE');
         $this->forge->addForeignKey('fkProduk', 'produk', 'id', 'NULL', 'CASCADE');
         $this->forge->addForeignKey('fkSubkriteria', 'subkriteria', 'id', 'NULL', 'CASCADE');
-        $this->forge->createTable('piihan');
+        $this->forge->createTable('pilihan');
 
         //pesanan
         $this->forge->addField([

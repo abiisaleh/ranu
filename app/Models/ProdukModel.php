@@ -14,7 +14,7 @@ class ProdukModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['merek','model','harga','fkJenis'];
+    protected $allowedFields    = ['merek', 'model', 'harga', 'fkJenis'];
 
     // Dates
     protected $useTimestamps = false;
@@ -42,9 +42,6 @@ class ProdukModel extends Model
 
     public function produkFitur($id)
     {
-        return $this->table('produk')
-                    ->join('fitur','fkProduk = produk.id')
-                    ->where('produk.id',$id)
-                    ->find();
+        return $this->join('fitur', 'fkProduk = produk.id')->where('produk.id', $id)->find();
     }
 }

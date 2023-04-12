@@ -1,0 +1,13 @@
+CRITICAL - 2023-03-12 04:32:21 --> Undefined array key 0
+in APPPATH\Views\pages\admin\produkForm.php on line 27.
+ 1 APPPATH\Views\pages\admin\produkForm.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\pages\\admin\\produkForm.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\admin\\produkForm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/admin/produkForm', [], true)
+ 5 APPPATH\Controllers\admin\Produk.php(59): view('pages/admin/produkForm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Produk->form('1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-12 04:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

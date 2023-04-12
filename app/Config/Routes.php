@@ -30,16 +30,34 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/produk(:any)', 'Home::produk$1');
+$routes->post('/pesan', 'Home::pesan');
+$routes->post('/smart', 'Home::smart');
+$routes->get('/kriteria/get_data', 'Home::get_data');
+
 $routes->get('/admin/dashboard', 'admin\dashboard');
 $routes->get('/admin/produk', 'admin\produk');
+$routes->get('/admin/produk/get_data', 'admin\produk::get_data');
 $routes->get('/admin/produk/form(:any)', 'admin\produk::form$1');
 $routes->post('/admin/produk/create', 'admin\produk::create');
 $routes->post('/admin/produk/update', 'admin\produk::update');
-$routes->get('/admin/produk/delete(:any)', 'admin\produk::delete$1');
+$routes->post('/admin/produk/delete', 'admin\produk::delete');
 $routes->get('/admin/kriteria', 'admin\kriteria');
 $routes->get('/admin/kriteria/get_data', 'admin\kriteria::get_data');
 $routes->post('/admin/kriteria/create', 'admin\kriteria::create');
+$routes->post('/admin/kriteria/edit', 'admin\kriteria::edit');
 $routes->post('/admin/kriteria/delete', 'admin\kriteria::delete');
+$routes->get('/admin/kriteria/subkriteria(:any)', 'admin\kriteria::subkriteria$1');
+$routes->get('/admin/kriteria/get_subkriteria', 'admin\kriteria::get_subkriteria');
+$routes->post('/admin/kriteria/create_subkriteria', 'admin\kriteria::create_subkriteria');
+$routes->post('/admin/kriteria/get_modalEdit', 'admin\kriteria::get_modalEdit');
+$routes->post('/admin/kriteria/update_subkriteria', 'admin\kriteria::update_subkriteria');
+$routes->post('/admin/kriteria/delete_subkriteria', 'admin\kriteria::delete_subkriteria');
+$routes->get('/admin/pesanan', 'admin\pesanan');
+$routes->get('/admin/pesanan/get_data', 'admin\pesanan::get_data');
+$routes->post('/admin/pesanan/delete', 'admin\pesanan::delete');
+$routes->post('/admin/pesanan/invoice', 'admin\pesanan::invoice');
+$routes->post('/admin/pesanan/verifikasi', 'admin\pesanan::verifikasi');
 
 /*
  * --------------------------------------------------------------------
