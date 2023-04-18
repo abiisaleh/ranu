@@ -43,9 +43,11 @@
     }
 
     html{
-      scroll-behavior: smooth;;
+      scroll-behavior: smooth;
     }
   </style>
+
+  <?php $this->renderSection('style');?>
 
 </head>
 

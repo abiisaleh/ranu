@@ -1,0 +1,1757 @@
+CRITICAL - 2023-04-12 02:56:18 --> Class "App\Controllers\RawSql" not found
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 02:58:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id, ( SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteri...' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT i...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT i...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT i...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT i...', Array, false)
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\app\Controllers\Home.php(39): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-12 02:58:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id, ( SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteri...' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT id, ( SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1 ) AS kapasitas, ( SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2 ) AS daya FROM produk WHERE ( SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 ) AND ( SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 ) AND fkJenis = 1
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(39): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 02:59:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM `produk`
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT *...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT *...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT *...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT *...', Array, false)
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\app\Controllers\Home.php(40): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-12 02:59:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM `produk`
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT * FROM `produk`
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(40): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 02:59:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM produk
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT *...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT *...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT *...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT *...', Array, false)
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\app\Controllers\Home.php(40): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-12 02:59:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM produk
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT * FROM produk
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(40): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 02:59:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT *
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT *...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT *...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT *...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT *...', Array, false)
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\app\Controllers\Home.php(40): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-12 02:59:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT *
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT *
+FROM `produk`', [], false)
+ 2 SYSTEMPATH\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(40): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:01:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT *
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT *...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT *...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT *...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT *...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 03:01:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT *
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT *
+FROM `produk`', [], false)
+ 2 APPPATH\Controllers\Home.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:01:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT i...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT i...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT i...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT i...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 03:01:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT id
+FROM `produk`', [], false)
+ 2 APPPATH\Controllers\Home.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:02:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT i...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT i...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT i...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT i...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 03:02:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT id
+FROM `produk`', [], false)
+ 2 APPPATH\Controllers\Home.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:03:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT i...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT i...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT i...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT i...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 03:03:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT id
+FROM `produk`', [], false)
+ 2 APPPATH\Controllers\Home.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:03:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id FROM produk
+FROM `produk`' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT i...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT i...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT i...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT i...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 03:03:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT id FROM produk
+FROM `produk`' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SELECT id FROM produk
+FROM `produk`', [], false)
+ 2 APPPATH\Controllers\Home.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:12:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT nama FROM kriteria WHERE id = 1), 
+            ( 
+                SEL...' at line 6 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\ranu\app\Controllers\Home.php(62): CodeIgniter\Database\BaseConnection->query('\n            SE...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-04-12 03:12:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT nama FROM kriteria WHERE id = 1), 
+            ( 
+                SEL...' at line 6
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Home.php(62): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+            ( 
+                SELECT nilai
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 
+            ) AS (SELECT nama FROM kriteria WHERE id = 1), 
+            ( 
+                SELECT nilai 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 
+            ) AS daya 
+            FROM produk 
+            WHERE 
+            ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 
+            ) AND ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 
+            ) AND fkJenis = 1
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:28:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1,
+            
+                (
+                    SELECT nilai
+          ...' at line 7 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\ranu\app\Controllers\Home.php(66): CodeIgniter\Database\BaseConnection->query('\n            SE...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-04-12 03:28:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1,
+            
+                (
+                    SELECT nilai
+          ...' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Home.php(66): CodeIgniter\Database\BaseConnection->query('
+            SELECT id,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = 1 
+                ) AS 1,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = 2 
+                ) AS 2,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = 3 
+                ) AS 3,
+            
+            model 
+            FROM produk 
+            WHERE 
+            ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 
+            ) AND ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 
+            ) AND fkJenis = 1
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 03:33:01 --> Undefined array key "nama"
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 03:33:24 --> Undefined array key "nama"
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 03:35:07 --> syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+in APPPATH\Controllers\Home.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 03:35:23 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 46.
+ 1 APPPATH\Controllers\Home.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:35:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik
+                ) AS fiturDaya Listrik,
+            
+                ...' at line 12 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('\n            SE...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-04-12 03:35:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik
+                ) AS fiturDaya Listrik,
+            
+                ...' at line 12
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('
+            SELECT id,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Kapasitas
+                ) AS fiturKapasitas,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Daya Listrik
+                ) AS fiturDaya Listrik,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Harga
+                ) AS fiturHarga,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Merek
+                ) AS fiturMerek,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Jenis Kulkas
+                ) AS fiturJenis Kulkas,
+            
+            model 
+            FROM produk 
+            WHERE 
+            ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 
+            ) AND ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 
+            ) AND fkJenis = 1
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:36:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik
+                ) AS Daya Listrik,
+            
+                (
+   ...' at line 12 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('\n            SE...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-04-12 03:36:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik
+                ) AS Daya Listrik,
+            
+                (
+   ...' at line 12
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('
+            SELECT id,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Kapasitas
+                ) AS Kapasitas,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Daya Listrik
+                ) AS Daya Listrik,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Harga
+                ) AS Harga,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Merek
+                ) AS Merek,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Jenis Kulkas
+                ) AS Jenis Kulkas,
+            
+            model 
+            FROM produk 
+            WHERE 
+            ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 
+            ) AND ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 
+            ) AND fkJenis = 1
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:36:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Kulkas
+                ) AS Jenis Kulkas,
+            
+            model 
+   ...' at line 30 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('\n            SE...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-04-12 03:36:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Kulkas
+                ) AS Jenis Kulkas,
+            
+            model 
+   ...' at line 30
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('
+            SELECT id,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Kapasitas
+                ) AS Kapasitas,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = DayaListrik
+                ) AS DayaListrik,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Harga
+                ) AS Harga,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Merek
+                ) AS Merek,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Jenis Kulkas
+                ) AS Jenis Kulkas,
+            
+            model 
+            FROM produk 
+            WHERE 
+            ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 
+            ) AND ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 
+            ) AND fkJenis = 1
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 03:36:57 --> mysqli_sql_exception: Reference 'Kapasitas' not supported (forward reference in item list) in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('\n            SE...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-04-12 03:36:57 --> Reference 'Kapasitas' not supported (forward reference in item list)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseConnection->query('
+            SELECT id,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Kapasitas
+                ) AS Kapasitas,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = DayaListrik
+                ) AS DayaListrik,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Harga
+                ) AS Harga,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = Merek
+                ) AS Merek,
+            
+                (
+                    SELECT nilai
+                    FROM fitur 
+                    WHERE fkProduk = produk.id AND fkKriteria = JenisKulkas
+                ) AS JenisKulkas,
+            
+            model 
+            FROM produk 
+            WHERE 
+            ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 2 AND nilai < 100 
+            ) AND ( 
+                SELECT COUNT(*) 
+                FROM fitur 
+                WHERE fkProduk = produk.id AND fkKriteria = 1 AND nilai < 200 
+            ) AND fkJenis = 1
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 04:01:56 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 48.
+ 1 APPPATH\Controllers\Home.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 04:02:10 --> Undefined variable $query
+in APPPATH\Controllers\Home.php on line 63.
+ 1 APPPATH\Controllers\Home.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\Home.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 04:02:19 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 67.
+ 1 APPPATH\Controllers\Home.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:15:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:
+AND 5 = :5:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:15:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:
+AND 5 = :5:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:
+AND 5 = :5:', [...], false)
+ 2 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:16:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:16:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:', [...], false)
+ 2 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:17:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:17:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:', [...], false)
+ 2 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:17:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:17:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:', [...], false)
+ 2 APPPATH\Controllers\Home.php(72): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:17:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:17:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:', [...], false)
+ 2 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:18:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:18:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:', [...], false)
+ 2 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 04:21:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 04:21:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 1) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 2) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 3) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 4) AS Merek, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 16) AS JenisKulkas
+FROM `produk`
+WHERE 0 = :0:
+AND 1 = :1:
+AND 2 = :2:
+AND 3 = :3:
+AND 4 = :4:', [...], false)
+ 2 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:49:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria =...' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:49:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria =...' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS Daya Listrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 14 AND nilai )', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:49:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria =...' at line 1 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:49:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Listrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria =...' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS Daya Listrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 14 AND `nilai` =)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:50:28 --> mysqli_sql_exception: Unknown column 'otomatis' in 'where clause' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:50:28 --> Unknown column 'otomatis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:53:22 --> mysqli_sql_exception: Unknown column 'manual' in 'where clause' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:53:22 --> Unknown column 'manual' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = manual)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:55:53 --> mysqli_sql_exception: Unknown column 'otomatis' in 'where clause' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:55:53 --> Unknown column 'otomatis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:57:38 --> mysqli_sql_exception: Unknown column '5.000.000' in 'where clause' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:57:38 --> Unknown column '5.000.000' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 11 AND `nilai` < `5`.`000`.`000`)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 05:59:33 --> mysqli_sql_exception: Unknown column 'samsung' in 'where clause' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 05:59:33 --> Unknown column 'samsung' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 15 AND `nilai` = samsung)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:00:17 --> mysqli_sql_exception: Unknown column 'kecil' in 'where clause' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:00:17 --> Unknown column 'kecil' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 13 AND `nilai` = kecil)', [], false)
+ 2 APPPATH\Controllers\Home.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:05:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND ...' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:05:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND ...' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 11 AND `nilai` < 3000000)', [], false)
+ 2 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:09:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'panasonic)' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:09:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'panasonic)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 15 AND nilai panasonic)', [], false)
+ 2 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:09:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'samsung)' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:09:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'samsung)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 15 AND nilai samsung)', [], false)
+ 2 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:11:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND ...' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(147): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:11:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND ...' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = \'otomatis\')', [], false)
+ 2 APPPATH\Controllers\Home.php(147): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:13:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:13:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:15:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:15:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:16:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 3 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:16:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:16:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 4 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:16:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = \'otomatis\')
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(145): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 06:21:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 4 in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 06:21:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'otomatis)' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = \'otomatis\')
+AND (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND nilai otomatis)', [], false)
+ 2 APPPATH\Controllers\Home.php(145): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:27:50 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Home.php on line 156.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:28:26 --> Undefined array key "kapasitas"
+in APPPATH\Controllers\Home.php on line 154.
+ 1 APPPATH\Controllers\Home.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kapasitas"', 'APPPATH\\Controllers\\Home.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:31:01 --> Undefined array key "kapasitas"
+in APPPATH\Controllers\Home.php on line 156.
+ 1 APPPATH\Controllers\Home.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kapasitas"', 'APPPATH\\Controllers\\Home.php', 156)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-12 07:35:00 --> mysqli_sql_exception: Unknown column 'kapasitas' in 'field list' in C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `m...', 0)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `m...')
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `m...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `m...', Array, false)
+#4 C:\xampp\htdocs\ranu\app\Controllers\Home.php(147): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(934): App\Controllers\Home->smart()
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ranu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-04-12 07:35:00 --> Unknown column 'kapasitas' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `model`, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 10) AS Fungsi, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 11) AS Harga, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 12) AS Kapasitas, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 13) AS Ukuran, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 14) AS DayaListrik, (SELECT nilai FROM fitur WHERE fkProduk = produk.id AND fkKriteria = 15) AS Merek, MAX(`kapasitas`) AS `max`
+FROM `produk`
+WHERE (SELECT COUNT(*) FROM fitur WHERE fkProduk = `produk`.`id` AND `fkKriteria` = 10 AND `nilai` = \'otomatis\')', [], false)
+ 2 APPPATH\Controllers\Home.php(147): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:40:14 --> Undefined array key "nama"
+in APPPATH\Controllers\Home.php on line 155.
+ 1 APPPATH\Controllers\Home.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Controllers\\Home.php', 155)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:42:13 --> max(): Argument #1 ($value) must be of type array, string given
+in APPPATH\Controllers\Home.php on line 159.
+ 1 APPPATH\Controllers\Home.php(159): max('8')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:44:37 --> Illegal offset type
+in APPPATH\Controllers\Home.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:45:54 --> Illegal offset type
+in APPPATH\Controllers\Home.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 07:46:37 --> Illegal offset type
+in APPPATH\Controllers\Home.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:01:34 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Home.php on line 168.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:02:07 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:03:50 --> Unsupported operand types: int - string
+in APPPATH\Controllers\Home.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:04:56 --> Unsupported operand types: int - string
+in APPPATH\Controllers\Home.php on line 169.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:07:36 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:09:27 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:10:16 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 171.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:11:02 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 170.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:15:21 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 172.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 08:45:38 --> Attempt to assign property "utility" on array
+in APPPATH\Controllers\Home.php on line 178.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 09:44:38 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Home.php on line 193.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 09:45:08 --> Undefined array key "utility_Fungsi"
+in APPPATH\Controllers\Home.php on line 187.
+ 1 APPPATH\Controllers\Home.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Controllers\\Home.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 09:57:14 --> max(): Argument #1 ($value) must contain at least one element
+in APPPATH\Controllers\Home.php on line 197.
+ 1 APPPATH\Controllers\Home.php(197): max([])
+ 2 [internal function]: App\Controllers\Home->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\Home.php(196): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 09:58:12 --> max(): Argument #1 ($value) must contain at least one element
+in APPPATH\Controllers\Home.php on line 197.
+ 1 APPPATH\Controllers\Home.php(197): max([])
+ 2 [internal function]: App\Controllers\Home->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\Home.php(196): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 10:01:47 --> max(): Argument #1 ($value) must contain at least one element
+in APPPATH\Controllers\Home.php on line 197.
+ 1 APPPATH\Controllers\Home.php(197): max([])
+ 2 [internal function]: App\Controllers\Home->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\Home.php(196): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 10:23:47 --> Division by zero
+in APPPATH\Controllers\Home.php on line 171.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 10:27:13 --> Division by zero
+in APPPATH\Controllers\Home.php on line 174.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-12 10:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 10:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 10:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-12 12:30:45 --> ErrorException: Undefined array key "make:cell" in C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php:270
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 270)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(292): CodeIgniter\Commands\Generators\CellGenerator->renderTemplate(Array)
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(204): CodeIgniter\Commands\Generators\CellGenerator->parseTemplate('App\\Cells\\Tabel')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(302): CodeIgniter\Commands\Generators\CellGenerator->prepare('App\\Cells\\Tabel')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(115): CodeIgniter\Commands\Generators\CellGenerator->buildContent('App\\Cells\\Tabel')
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Generators\CellGenerator.php(83): CodeIgniter\Commands\Generators\CellGenerator->generateClass(Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Generators\CellGenerator->run(Array)
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('make:cell', Array)
+#8 C:\xampp\htdocs\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+ERROR - 2023-04-12 12:30:55 --> ErrorException: Undefined array key "make:cell" in C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php:270
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 270)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(292): CodeIgniter\Commands\Generators\CellGenerator->renderTemplate(Array)
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(204): CodeIgniter\Commands\Generators\CellGenerator->parseTemplate('App\\Cells\\tabel...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(302): CodeIgniter\Commands\Generators\CellGenerator->prepare('App\\Cells\\tabel...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(132): CodeIgniter\Commands\Generators\CellGenerator->buildContent('App\\Cells\\tabel...')
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Generators\CellGenerator.php(101): CodeIgniter\Commands\Generators\CellGenerator->generateView('App\\Cells\\tabel...', Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Generators\CellGenerator->run(Array)
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('make:cell', Array)
+#8 C:\xampp\htdocs\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+ERROR - 2023-04-12 12:31:38 --> ErrorException: Undefined array key "make:cell" in C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php:270
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 270)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(292): CodeIgniter\Commands\Generators\CellGenerator->renderTemplate(Array)
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(204): CodeIgniter\Commands\Generators\CellGenerator->parseTemplate('App\\Cells\\Tabel')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(302): CodeIgniter\Commands\Generators\CellGenerator->prepare('App\\Cells\\Tabel')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(115): CodeIgniter\Commands\Generators\CellGenerator->buildContent('App\\Cells\\Tabel')
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Generators\CellGenerator.php(83): CodeIgniter\Commands\Generators\CellGenerator->generateClass(Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Generators\CellGenerator->run(Array)
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('make:cell', Array)
+#8 C:\xampp\htdocs\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+ERROR - 2023-04-12 12:31:38 --> ErrorException: Undefined array key "make:cell" in C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php:270
+Stack trace:
+#0 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 270)
+#1 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(292): CodeIgniter\Commands\Generators\CellGenerator->renderTemplate(Array)
+#2 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(204): CodeIgniter\Commands\Generators\CellGenerator->parseTemplate('App\\Cells\\tabel...')
+#3 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(302): CodeIgniter\Commands\Generators\CellGenerator->prepare('App\\Cells\\tabel...')
+#4 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\GeneratorTrait.php(132): CodeIgniter\Commands\Generators\CellGenerator->buildContent('App\\Cells\\tabel...')
+#5 C:\xampp\htdocs\ranu\CodeIgniter4\system\Commands\Generators\CellGenerator.php(101): CodeIgniter\Commands\Generators\CellGenerator->generateView('App\\Cells\\tabel...', Array)
+#6 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Commands.php(65): CodeIgniter\Commands\Generators\CellGenerator->run(Array)
+#7 C:\xampp\htdocs\ranu\CodeIgniter4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('make:cell', Array)
+#8 C:\xampp\htdocs\ranu\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+CRITICAL - 2023-04-12 12:40:07 --> Unclosed '{' on line 98 does not match ')'
+in APPPATH\Controllers\Home.php on line 174.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 12:49:59 --> Undefined variable $kriteria
+in APPPATH\Views\pages\user\rekomendasi.php on line 12.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kriteria', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 12:51:02 --> Undefined variable $i
+in APPPATH\Views\pages\user\rekomendasi.php on line 14.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:03:18 --> syntax error, unexpected end of file
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 3 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:04:02 --> syntax error, unexpected end of file
+in APPPATH\Views\pages\user\rekomendasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 3 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:04:48 --> Cannot access offset of type string on string
+in APPPATH\Views\pages\user\rekomendasi.php on line 37.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 4 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:05:16 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 95.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:07:36 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 101.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 101)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:08:11 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:08:38 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:08:53 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:09:04 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:09:45 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:09:58 --> Undefined array key "utility_Ukuran"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Ukuran"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 13:10:16 --> Undefined array key "utility_Fungsi"
+in APPPATH\Views\pages\user\rekomendasi.php on line 104.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utility_Fungsi"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(183): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
