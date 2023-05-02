@@ -33,10 +33,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    File yang Anda unggah berhasil disimpan di server.
+                    File yang Anda unggah berhasil disimpan di server dan akan di verifikasi oleh admin.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <a class="btn btn-secondary" href="/">Selesai</a>
                 </div>
             </div>
         </div>
@@ -59,10 +59,13 @@
         }
     });
 
+    var successModal = new bootstrap.Modal(document.getElementById('successModal'), {
+        keyboard: false
+    })
+
     // Tampilkan modal pesan sukses ketika file berhasil terunggah
     pond.on('processfiles', () => {
-        document.getElementById('successModal').style.display = 'block'
-        console.log('berhasil');
+        successModal.show();
     });
 </script>
 <?php $this->endsection('script'); ?>
