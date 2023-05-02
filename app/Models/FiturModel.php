@@ -14,7 +14,7 @@ class FiturModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nilai','fkProduk','fkKriteria'];
+    protected $allowedFields    = ['nilai', 'fkProduk', 'fkKriteria'];
 
     // Dates
     protected $useTimestamps = false;

@@ -1,0 +1,12 @@
+CRITICAL - 2023-04-25 05:06:24 --> Undefined array key "jenis"
+in APPPATH\Views\pages\user\rekomendasi.php on line 10.
+ 1 APPPATH\Views\pages\user\rekomendasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jenis"', 'APPPATH\\Views\\pages\\user\\rekomendasi.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\rekomendasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 5 APPPATH\Controllers\Home.php(203): view('pages/user/rekomendasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

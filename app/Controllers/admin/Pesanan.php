@@ -54,7 +54,7 @@ class Pesanan extends BaseController
         if ($this->request->isAjax()) {
             $id = $this->request->getVar('id');
             $data = [
-                'pesanan' => $this->pesananModel->joinKonsumenProduk()->find($id) 
+                'pesanan' => $this->pesananModel->joinKonsumenProduk()->find($id)
             ];
 
             $result = [
@@ -71,9 +71,10 @@ class Pesanan extends BaseController
     {
         if ($this->request->isAjax()) {
             $id = $this->request->getVar('id');
+            $status = $this->request->getVar('status');
             $data = [
                 'id' => $id,
-                'status' => 'verified'
+                'status' => $status
             ];
             $this->pesananModel->save($data);
         } else {

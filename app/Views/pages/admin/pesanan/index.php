@@ -137,7 +137,7 @@
   function invoice(id) {
     $.ajax({
       type: "post",
-      url: "<?= base_url('admin/pesanan/invoice')?>",
+      url: "<?= base_url('admin/pesanan/invoice') ?>",
       data: {
         id: id
       },
@@ -152,12 +152,31 @@
     })
   }
 
-  function verifikasi(id) {
+  function kirim(id) {
     $.ajax({
       type: "post",
-      url: "<?= base_url('admin/pesanan/verifikasi')?>",
+      url: "<?= base_url('admin/pesanan/verifikasi') ?>",
       data: {
-        id: id
+        id: id,
+        status: 'dikirim'
+      },
+      success: function() {
+        $('#modal-pesanan').modal('hide')
+        get_data()
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError)
+      }
+    })
+  }
+
+  function selesai(id) {
+    $.ajax({
+      type: "post",
+      url: "<?= base_url('admin/pesanan/verifikasi') ?>",
+      data: {
+        id: id,
+        status: 'selesai'
       },
       success: function() {
         $('#modal-pesanan').modal('hide')

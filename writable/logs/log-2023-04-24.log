@@ -1,0 +1,237 @@
+CRITICAL - 2023-04-24 03:55:35 --> Undefined variable $subkriteria
+in APPPATH\Controllers\Home.php on line 140.
+ 1 APPPATH\Controllers\Home.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subkriteria', 'APPPATH\\Controllers\\Home.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 03:56:40 --> Undefined array key "nama"
+in APPPATH\Controllers\Home.php on line 139.
+ 1 APPPATH\Controllers\Home.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Controllers\\Home.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 03:57:16 --> Undefined array key "nama"
+in APPPATH\Controllers\Home.php on line 141.
+ 1 APPPATH\Controllers\Home.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH\\Controllers\\Home.php', 141)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 03:59:09 --> Object of class App\Models\SubkriteriaModel could not be converted to string
+in APPPATH\Views\pages\user\rekomendasi.php on line 65.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 4 APPPATH\Controllers\Home.php(198): view('pages/user/rekomendasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:00:07 --> Object of class App\Models\SubkriteriaModel could not be converted to string
+in APPPATH\Views\pages\user\rekomendasi.php on line 65.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 4 APPPATH\Controllers\Home.php(200): view('pages/user/rekomendasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:02:10 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+in APPPATH\Controllers\Home.php on line 146.
+ 1 APPPATH\Controllers\Home.php(146): in_array('Fungsi', 'Merek')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:02:24 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+in APPPATH\Controllers\Home.php on line 147.
+ 1 APPPATH\Controllers\Home.php(147): in_array('Fungsi', 'Merek')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:03:04 --> Object of class App\Models\SubkriteriaModel could not be converted to string
+in APPPATH\Views\pages\user\rekomendasi.php on line 65.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 4 APPPATH\Controllers\Home.php(198): view('pages/user/rekomendasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:03:55 --> Object of class App\Models\SubkriteriaModel could not be converted to string
+in APPPATH\Views\pages\user\rekomendasi.php on line 65.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 4 APPPATH\Controllers\Home.php(198): view('pages/user/rekomendasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:05:37 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+in APPPATH\Controllers\Home.php on line 144.
+ 1 APPPATH\Controllers\Home.php(144): in_array('Fungsi', 'Merek')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:12:27 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 162.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:12:55 --> max(): Argument #1 ($value) must contain at least one element
+in APPPATH\Controllers\Home.php on line 153.
+ 1 APPPATH\Controllers\Home.php(153): max([])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:13:31 --> max(): Argument #1 ($value) must contain at least one element
+in APPPATH\Controllers\Home.php on line 154.
+ 1 APPPATH\Controllers\Home.php(154): max([])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:14:06 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:14:34 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:15:13 --> max(): Argument #1 ($value) must contain at least one element
+in APPPATH\Controllers\Home.php on line 154.
+ 1 APPPATH\Controllers\Home.php(154): max([])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:16:11 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:16:32 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:17:46 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 162.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:18:32 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:19:19 --> Unsupported operand types: string - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:19:36 --> Unsupported operand types: int - string
+in APPPATH\Controllers\Home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:22:30 --> Undefined array key 0
+in APPPATH\Controllers\Home.php on line 161.
+ 1 APPPATH\Controllers\Home.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Home.php', 161)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:23:45 --> Undefined array key 0
+in APPPATH\Controllers\Home.php on line 150.
+ 1 APPPATH\Controllers\Home.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Home.php', 150)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:25:19 --> Undefined array key 0
+in APPPATH\Controllers\Home.php on line 150.
+ 1 APPPATH\Controllers\Home.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Home.php', 150)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:26:18 --> Undefined array key 0
+in APPPATH\Controllers\Home.php on line 150.
+ 1 APPPATH\Controllers\Home.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Home.php', 150)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:26:47 --> Undefined array key 0
+in APPPATH\Controllers\Home.php on line 151.
+ 1 APPPATH\Controllers\Home.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Home.php', 151)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:27:32 --> Undefined array key 0
+in APPPATH\Controllers\Home.php on line 153.
+ 1 APPPATH\Controllers\Home.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Home.php', 153)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-24 04:39:42 --> syntax error, unexpected end of file
+in APPPATH\Views\pages\user\rekomendasi.php on line 122.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('pages/user/rekomendasi', [], true)
+ 3 APPPATH\Controllers\Home.php(201): view('pages/user/rekomendasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->smart()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

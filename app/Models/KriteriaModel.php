@@ -10,6 +10,7 @@ class KriteriaModel extends Model
     protected $table            = 'kriteria';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
+    protected $formatPrimaryKey = 'k-{id:3}'; //mengatur format primary key menjadi p-001
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

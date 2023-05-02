@@ -190,16 +190,15 @@ class Kriteria extends BaseController
             helper('form');
             $data = $this->request->getVar();
             $this->subkriteriaModel->save($data);
-            
+
             $result = [
                 'success' => "Data has been updated from database"
             ];
-            
+
             echo json_encode($result);
         } else {
             exit('404 Not Found');
         }
-
     }
 
     public function delete_subkriteria()
