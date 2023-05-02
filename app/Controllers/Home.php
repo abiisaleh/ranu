@@ -96,13 +96,12 @@ class Home extends BaseController
         return view('pages/user/pembayaran', $data);
     }
 
-    public function upload()
+    public function upload($id)
     {
-        $id = $this->request->getPost('id');
-
         $file = $this->request->getFile('gambar');
 
-        $file->move(ROOTPATH . 'public/uploads', $id, true);
+        $file->move(FCPATH . 'uploads', $id . '-nota.jpg', true);
+
         return json_encode(['status' => 'success']);
     }
 

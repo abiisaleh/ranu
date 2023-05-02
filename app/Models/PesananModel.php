@@ -45,6 +45,7 @@ class PesananModel extends Model
         return $this
             ->join('konsumen', 'konsumen.id = fkKonsumen')
             ->join('produk', 'produk.id = fkProduk')
-            ->select('pesanan.id as id, konsumen.nama as nama, produk.merek as merek, produk.model as model, tanggal, status');
+            ->join('jenis', 'jenis.id = produk.fkJenis')
+            ->select('konsumen.*, produk.*, tanggal, status, pesanan.id as id, jenis.nama as jenis');
     }
 }

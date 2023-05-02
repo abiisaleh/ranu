@@ -55,11 +55,7 @@
     const inputElement = document.querySelector('input[type="file"]');
     const pond = FilePond.create(inputElement, {
         server: {
-            url: '/upload',
-            method: 'POST',
-            data: {
-                id: '<?= $idPesanan ?>'
-            }
+            url: '/upload/<?= $idPesanan ?>'
         }
     });
 

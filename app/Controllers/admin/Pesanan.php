@@ -43,7 +43,7 @@ class Pesanan extends BaseController
     {
         if ($this->request->isAJAX()) {
             $id = $this->request->getVar('id');
-            $this->kriteriaModel->delete($id);
+            $this->pesananModel->delete($id);
         } else {
             exit('404 Not Found');
         }

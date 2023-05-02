@@ -13,11 +13,11 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>Call of Duty</td>
-                      <td>455-981-221</td>
-                      <td>El snort testosterone trophy driving gloves handsome</td>
-                      <td>$64.50</td>
+                      <td><?= $pesanan['id'] ?></td>
+                      <td><?= $pesanan['jenis'] ?></td>
+                      <td><?= $pesanan['merek'] ?></td>
+                      <td><?= $pesanan['model'] ?></td>
+                      <td>Rp. <?= number_format($pesanan['harga']) ?></td>
                     </tr>
                   </tbody>
                 </table>
@@ -34,15 +34,15 @@
                   <table class="table">
                     <tr>
                       <th style="width:50%">Nama:</th>
-                      <td>Muhamad Abi Saleh</td>
+                      <td><?= $pesanan['nama'] ?></td>
                     </tr>
                     <tr>
                       <th>Telp</th>
-                      <td>082238204776</td>
+                      <td><?= $pesanan['telp'] ?></td>
                     </tr>
                     <tr>
                       <th>Alamat:</th>
-                      <td>Abepura</td>
+                      <td><?= $pesanan['alamat'] ?></td>
                     </tr>
                   </table>
                 </div>
@@ -50,8 +50,8 @@
               <!-- /.col -->
               <div class="col-6">
                 <p class="lead">Bukti Pembayaran</p>
-                <a href="../../dist/img/credit/visa.png">
-                  <img src="../../dist/img/credit/visa.png" alt="Visa" width="200">
+                <a href="../../uploads/<?= $pesanan['id'] ?>-nota.jpg">
+                  <img src="../../uploads/<?= $pesanan['id'] ?>-nota.jpg" alt="Bukti Pembayaran" width="200">
                 </a>
               </div>
               <!-- /.col -->
@@ -70,7 +70,7 @@
                   <button type="button" class="btn btn-warning float-right" style="margin-right: 5px;" onclick="kirim(<?= $pesanan['id'] ?>)"><i class="far fa-credit-card"></i>
                     Kirim
                   </button>
-                <?php else : ?>
+                <?php elseif ($pesanan['status'] == 'dikirim') : ?>
                   <button href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-success float-right" onclick="selesai(<?= $pesanan['id'] ?>)"><i class="fas fa-print"></i> Selesai</button>
                 <?php endif; ?>
 

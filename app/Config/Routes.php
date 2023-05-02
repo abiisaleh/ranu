@@ -33,7 +33,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/produk(:any)', 'Home::produk$1');
 $routes->post('/pesan', 'Home::pesan');
 $routes->get('/pembayaran(:any)', 'Home::pembayaran$1');
-$routes->post('/upload', 'Home::upload');
+$routes->post('/upload(:any)', 'Home::upload$1');
 $routes->post('/smart', 'Home::smart');
 $routes->get('/kriteria/get_data', 'Home::get_data');
 
