@@ -62,8 +62,21 @@ class Home extends BaseController
                 'kriteria' => $this->kriteriaModel->where('fkJenis', $id)->find(),
             ];
 
+            if ($id == 1) {
+                //kulkas
+                $view = view('pages/user/inputKriteriaKulkas');
+            } elseif ($id == 2) {
+                //AC
+                $view = view('pages/user/inputKriteriaAC');
+            } elseif ($id == 3) {
+                //mesin cuci
+                $view = view('pages/user/inputKriteriaMesinCuci');
+            } else {
+                $view = null;
+            }
+
             $result = [
-                'output' => view('pages/user/inputKriteria', $data)
+                'output' => $view
             ];
 
             echo json_encode($result);
