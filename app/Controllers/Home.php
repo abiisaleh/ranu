@@ -70,7 +70,8 @@ class Home extends BaseController
                 $view = view('pages/user/inputKriteriaAC');
             } elseif ($id == 3) {
                 //mesin cuci
-                $view = view('pages/user/inputKriteriaMesinCuci');
+                // $view = view('pages/user/inputKriteriaMesinCuci');
+                $view = view('pages/user/inputKriteria',$data);
             } else {
                 $view = null;
             }
@@ -134,14 +135,12 @@ class Home extends BaseController
         $query = $db->table('produk')->select($select);
         foreach ($kriteria as $Kriteria) {
             $input = $this->request->getVar($Kriteria['nama']);
-            if ($input != "-") {
+            if ($input != "-" and $input) {
                 $id = $Kriteria['id'];
-                if ($Kriteria['nama'] == 'Harga' or $Kriteria['nama'] == 'Kapasitas') {
-                    $inputHarga = str_replace('.', '', $input);
-                    $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai $inputHarga)");
-                } else {
-                    $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai = '$input')");
-                }
+                d($id);
+                d($input);
+                $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai $input)");
+
             }
         }
         $result = $query->get()->getResultArray();
