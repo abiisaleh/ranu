@@ -148,6 +148,13 @@ class Home extends BaseController
         }
         $result = $query->get()->getResultArray();
 
+        //kalau data tidak ditemukan skip perhitungan
+        if (empty($result)) {
+            echo 'data tidak ditemukan';
+            return $this;
+        }
+
+
         //Tahap 1 : Kriteria yang digunakan
         $data['kriteria'] = $kriteria;
 
@@ -177,7 +184,7 @@ class Home extends BaseController
 
         //cari nilai min & max
         foreach ($kriteria as $Kriteria) {
-            $kualitatif = ['Fungsi','Ukuran','Merek','JenisKulkas'];
+            $kualitatif = ['Fungsi','Ukuran','Merek','JenisKulkas','Tenaga'];
             $nilai = [];
             foreach ($result as $Result) {
                 if (!in_array($Kriteria['nama'], $kualitatif)) {
