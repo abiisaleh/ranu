@@ -62,21 +62,21 @@ class Home extends BaseController
                 'kriteria' => $this->kriteriaModel->where('fkJenis', $id)->find(),
             ];
 
-            if ($id == 1) {
-                //kulkas
-                $view = view('pages/user/inputKriteriaKulkas');
-            } elseif ($id == 2) {
-                //AC
-                $view = view('pages/user/inputKriteriaAC');
-            } elseif ($id == 3) {
-                //mesin cuci
-                $view = view('pages/user/inputKriteriaMesinCuci');
-            } else {
-                $view = null;
-            }
+            // if ($id == 1) {
+            //     //kulkas
+            //     $view = view('pages/user/inputKriteriaKulkas');
+            // } elseif ($id == 2) {
+            //     //AC
+            //     $view = view('pages/user/inputKriteriaAC');
+            // } elseif ($id == 3) {
+            //     //mesin cuci
+            //     $view = view('pages/user/inputKriteriaMesinCuci');
+            // } else {
+            //     $view = null;
+            // }
 
             $result = [
-                'output' => $view
+                'output' => view('pages/user/inputKriteria',$data)
             ];
 
             echo json_encode($result);
@@ -138,7 +138,9 @@ class Home extends BaseController
                 $id = $Kriteria['id'];
                 if ($Kriteria['nama'] == 'Harga' or $Kriteria['nama'] == 'Kapasitas') {
                     $inputHarga = str_replace('.', '', $input);
-                    $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai $inputHarga)");
+                    $harga_min = explode('-',$inputHarga)[0];
+                    $harga_max = explode('-',$inputHarga)[1];
+                    $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai > $harga_min AND nilai < $harga_max)");
                 } else {
                     $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai = '$input')");
                 }
@@ -158,6 +160,7 @@ class Home extends BaseController
         foreach ($kriteria as &$Kriteria) {
             $Kriteria['normalisasi'] = $Kriteria['bobot'] / $total;
         }
+        $data['kriteria'] = $kriteria; //perbarui data kriteria
 
         //Tahap 3 : Utility
         $data['alternatif'] = $result; //data alternatif
@@ -174,7 +177,7 @@ class Home extends BaseController
 
         //cari nilai min & max
         foreach ($kriteria as $Kriteria) {
-            $kualitatif = $s;
+            $kualitatif = ['Fungsi','Ukuran','Merek','JenisKulkas'];
             $nilai = [];
             foreach ($result as $Result) {
                 if (!in_array($Kriteria['nama'], $kualitatif)) {
