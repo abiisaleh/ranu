@@ -36,7 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <a class="btn btn-danger" href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a class="btn btn-danger" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
       </ul>
     </nav>
     <!-- /.navbar -->
