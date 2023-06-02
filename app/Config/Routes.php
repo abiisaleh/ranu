@@ -60,6 +60,7 @@ $routes->get('/admin/pesanan/get_data', 'admin\Pesanan::get_data', ['filter' => 
 $routes->post('/admin/pesanan/delete', 'admin\Pesanan::delete', ['filter' => 'role:admin']);
 $routes->post('/admin/pesanan/invoice', 'admin\Pesanan::invoice', ['filter' => 'role:admin']);
 $routes->post('/admin/pesanan/verifikasi', 'admin\Pesanan::verifikasi', ['filter' => 'role:admin']);
+$routes->get('/admin/laporan', 'admin\Laporan::index', ['filter' => 'role:admin']);
 
 /*
  * --------------------------------------------------------------------
