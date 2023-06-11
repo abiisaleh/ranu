@@ -1,6 +1,34 @@
 <?= $this->extend('template/user'); ?>
 <?= $this->section('content'); ?>
 <!-- slider section -->
+<section class="slider_section">
+  <div id="customCarousel1" class="carousel slide" data-ride="carousel" style="height: 400px; padding: 100px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container ">
+          <div class="row">
+            <div class="col-12">
+              <div class="detail-box text-center p-4">
+                <h1>
+                  Selamat Datang
+                </h1>
+                <p>
+                  Central Plaza Elektronik adalah toko elektronik yang menyediakan banyak barang elektronik yang bisa anda beli dan kualitas barang terbaik serta harga yang terjangkau anda bisa dapatkan ditoko kami.
+                </p>
+                <a href="#produk">
+                  Lihat Produk
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end slider section -->
+
+<!-- slider section -->
 <section class="slider_section" id="home">
   <div id="customCarousel1" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
