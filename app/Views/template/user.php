@@ -8,7 +8,6 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <!-- <link rel="icon" href="images/fevicon.png" type="image/gif" /> -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -53,125 +52,11 @@
 <body>
 
   <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section fixed-top">
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="/">
-              <span>
-                Plaza Elektonik
-              </span>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#produk">Produk</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#cabang">Cabang</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link bg-warning rounded" href="/admin/dashboard">
-                    <i class="fa fa-user mr-2" aria-hidden="true"></i>
-                    <span>
-                      Admin
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <!-- end header section -->
+    <?= $this->include('template/_navbar'); ?>
 
     <?php $this->renderSection('content'); ?>
 
-    <!-- info section -->
-    <section class="info_section ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="info_contact">
-              <h5>
-                <a href="" class="navbar-brand">
-                  <span>
-                    Minics
-                  </span>
-                </a>
-              </h5>
-              <p>
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                Address
-              </p>
-              <p>
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                +01 1234567890
-              </p>
-              <p>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                demo@gmail.com
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info_info">
-              <h5>
-                Information
-              </h5>
-              <p>
-                Eligendi sunt, provident, debitis nemo, facilis cupiditate velit libero dolorum aperiam enim nulla iste maxime corrupti ad illo libero minus.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="info_links">
-              <h5>
-                Useful Link
-              </h5>
-              <ul>
-                <li>
-                  <a href="index.html">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="about.html">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="product.html">
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="why.html">
-                    Why Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end info_section -->
-
+    <?= $this->include('template/_footer'); ?>
 
     <!-- footer section -->
     <footer class="footer_section">

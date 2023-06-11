@@ -47,7 +47,7 @@ class Home extends BaseController
         helper('form');
 
         $data = [
-            'produk' => $this->produkModel->join('jenis', 'fkJenis = jenis.id')->find($id),
+            'produk' => $this->produkModel->join('jenis', 'fkJenis = jenis.id')->select('produk.*, jenis.nama as nama')->find($id),
             'fitur' => $this->produkModel->join('fitur', 'fkProduk = produk.id')->join('kriteria', 'fkKriteria = kriteria.id')->where('fkProduk', $id)->find(),
         ];
 
@@ -63,7 +63,7 @@ class Home extends BaseController
             ];
 
             $result = [
-                'output' => view('pages/user/inputKriteria',$data)
+                'output' => view('pages/user/inputKriteria', $data)
             ];
 
             echo json_encode($result);
@@ -125,8 +125,8 @@ class Home extends BaseController
                 $id = $Kriteria['id'];
                 if ($Kriteria['nama'] == 'Harga' or $Kriteria['nama'] == 'Kapasitas') {
                     $inputHarga = str_replace('.', '', $input);
-                    $harga_min = explode('-',$inputHarga)[0];
-                    $harga_max = explode('-',$inputHarga)[1];
+                    $harga_min = explode('-', $inputHarga)[0];
+                    $harga_max = explode('-', $inputHarga)[1];
                     $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai > $harga_min AND nilai < $harga_max)");
                 } else {
                     $query->where("(SELECT COUNT(*) FROM fitur WHERE fkProduk = produk.id AND fkKriteria = $id AND nilai = '$input')");
@@ -171,7 +171,7 @@ class Home extends BaseController
 
         //cari nilai min & max
         foreach ($kriteria as $Kriteria) {
-            $kualitatif = ['Fungsi','Ukuran','Merek','JenisKulkas','Tenaga'];
+            $kualitatif = ['Fungsi', 'Ukuran', 'Merek', 'JenisKulkas', 'Tenaga'];
             $nilai = [];
             foreach ($result as $Result) {
                 if (!in_array($Kriteria['nama'], $kualitatif)) {

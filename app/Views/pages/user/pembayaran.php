@@ -11,7 +11,7 @@
             <div class="col-6 mx-auto">
                 <p class="text-center">
                     Pesanan <b><?= $idPesanan ?></b> berhasil dibuat.
-                    Harap Melakukan pembayaran sebesar <b>Rp. <?= number_format($total) ?></b> ke Mandiri No Rek <b>12345678</b> atas nama ranu irianto lappu
+                    Harap Melakukan pembayaran sebesar <b>Rp. <?= number_format($total) ?></b> ke BRI No Rek <b>031101008888530</b> atas nama Rannu Irianto Lapu
                 </p>
             </div>
         </div>

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.33, for Linux (x86_64)
 --
 -- Host: localhost    Database: ranu
 -- ------------------------------------------------------
--- Server version	8.0.32-0ubuntu0.22.04.2
+-- Server version	8.0.33-0ubuntu0.22.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -15,203 +15,245 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-USE ranu;
-
 --
--- Table structure for table `fitur`
+-- Table structure for table `auth_activation_attempts`
 --
 
-DROP TABLE IF EXISTS `fitur`;
+DROP TABLE IF EXISTS `auth_activation_attempts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `fitur` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nilai` varchar(50) NOT NULL,
-  `fkProduk` int NOT NULL,
-  `fkKriteria` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fitur_fkProduk_foreign` (`fkProduk`),
-  KEY `fitur_fkKriteria_foreign` (`fkKriteria`),
-  CONSTRAINT `fitur_fkKriteria_foreign` FOREIGN KEY (`fkKriteria`) REFERENCES `kriteria` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `fitur_fkProduk_foreign` FOREIGN KEY (`fkProduk`) REFERENCES `produk` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1969 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `jenis`
---
-
-DROP TABLE IF EXISTS `jenis`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `jenis` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nama` varchar(50) NOT NULL,
+CREATE TABLE `auth_activation_attempts` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(255) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `konsumen`
---
-
-DROP TABLE IF EXISTS `konsumen`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `konsumen` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nama` varchar(50) NOT NULL,
-  `telp` varchar(16) NOT NULL,
-  `alamat` varchar(50) NOT NULL,
-  `tanggalLahir` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `kriteria`
---
-
-DROP TABLE IF EXISTS `kriteria`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `kriteria` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nama` varchar(50) NOT NULL,
-  `bobot` int NOT NULL,
-  `utility` enum('lebih kecil lebih baik','lebih besar lebih baik') NOT NULL,
-  `fkJenis` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `kriteria_fkJenis_foreign` (`fkJenis`),
-  CONSTRAINT `kriteria_fkJenis_foreign` FOREIGN KEY (`fkJenis`) REFERENCES `jenis` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `migrations`
---
-
-DROP TABLE IF EXISTS `migrations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `migrations` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `version` varchar(255) NOT NULL,
-  `class` varchar(255) NOT NULL,
-  `group` varchar(255) NOT NULL,
-  `namespace` varchar(255) NOT NULL,
-  `time` int NOT NULL,
-  `batch` int unsigned NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `pesanan`
---
-
-DROP TABLE IF EXISTS `pesanan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pesanan` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` enum('pending','dikirim','selesai') NOT NULL DEFAULT 'pending',
-  `fkProduk` int NOT NULL,
-  `fkKonsumen` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `pesanan_fkProduk_foreign` (`fkProduk`),
-  KEY `pesanan_fkKonsumen_foreign` (`fkKonsumen`),
-  CONSTRAINT `pesanan_fkKonsumen_foreign` FOREIGN KEY (`fkKonsumen`) REFERENCES `konsumen` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `pesanan_fkProduk_foreign` FOREIGN KEY (`fkProduk`) REFERENCES `produk` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `pilihan`
---
-
-DROP TABLE IF EXISTS `pilihan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pilihan` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `fkKonsumen` int NOT NULL,
-  `fkProduk` int NOT NULL,
-  `fkSubkriteria` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `pilihan_fkKonsumen_foreign` (`fkKonsumen`),
-  KEY `pilihan_fkProduk_foreign` (`fkProduk`),
-  KEY `pilihan_fkSubkriteria_foreign` (`fkSubkriteria`),
-  CONSTRAINT `pilihan_fkKonsumen_foreign` FOREIGN KEY (`fkKonsumen`) REFERENCES `konsumen` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `pilihan_fkProduk_foreign` FOREIGN KEY (`fkProduk`) REFERENCES `produk` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `pilihan_fkSubkriteria_foreign` FOREIGN KEY (`fkSubkriteria`) REFERENCES `subkriteria` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `produk`
+-- Dumping data for table `auth_activation_attempts`
 --
 
-DROP TABLE IF EXISTS `produk`;
+LOCK TABLES `auth_activation_attempts` WRITE;
+/*!40000 ALTER TABLE `auth_activation_attempts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_activation_attempts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_groups`
+--
+
+DROP TABLE IF EXISTS `auth_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `produk` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `merek` varchar(50) NOT NULL,
-  `model` varchar(50) NOT NULL,
-  `harga` int NOT NULL,
-  `fkJenis` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `produk_fkJenis_foreign` (`fkJenis`),
-  CONSTRAINT `produk_fkJenis_foreign` FOREIGN KEY (`fkJenis`) REFERENCES `jenis` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1066 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `auth_groups` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `subkriteria`
+-- Dumping data for table `auth_groups`
 --
 
-DROP TABLE IF EXISTS `subkriteria`;
+LOCK TABLES `auth_groups` WRITE;
+/*!40000 ALTER TABLE `auth_groups` DISABLE KEYS */;
+INSERT INTO `auth_groups` VALUES (1,'admin','kelola admin');
+/*!40000 ALTER TABLE `auth_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_groups_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_groups_permissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `subkriteria` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nama` varchar(50) NOT NULL,
-  `nilai` int NOT NULL,
-  `fkKriteria` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `subkriteria_fkKriteria_foreign` (`fkKriteria`),
-  CONSTRAINT `subkriteria_fkKriteria_foreign` FOREIGN KEY (`fkKriteria`) REFERENCES `kriteria` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `auth_groups_permissions` (
+  `group_id` int unsigned NOT NULL DEFAULT '0',
+  `permission_id` int unsigned NOT NULL DEFAULT '0',
+  KEY `auth_groups_permissions_permission_id_foreign` (`permission_id`),
+  KEY `group_id_permission_id` (`group_id`,`permission_id`),
+  CONSTRAINT `auth_groups_permissions_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `auth_groups` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `auth_groups_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `auth_permissions` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2023-05-10 18:56:04
--- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
 --
--- Host: localhost    Database: ranu
--- ------------------------------------------------------
--- Server version	8.0.32-0ubuntu0.22.04.2
+-- Dumping data for table `auth_groups_permissions`
+--
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+LOCK TABLES `auth_groups_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_groups_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_groups_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_groups_users`
+--
+
+DROP TABLE IF EXISTS `auth_groups_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auth_groups_users` (
+  `group_id` int unsigned NOT NULL DEFAULT '0',
+  `user_id` int unsigned NOT NULL DEFAULT '0',
+  KEY `auth_groups_users_user_id_foreign` (`user_id`),
+  KEY `group_id_user_id` (`group_id`,`user_id`),
+  CONSTRAINT `auth_groups_users_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `auth_groups` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `auth_groups_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_groups_users`
+--
+
+LOCK TABLES `auth_groups_users` WRITE;
+/*!40000 ALTER TABLE `auth_groups_users` DISABLE KEYS */;
+INSERT INTO `auth_groups_users` VALUES (1,1);
+/*!40000 ALTER TABLE `auth_groups_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_logins`
+--
+
+DROP TABLE IF EXISTS `auth_logins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auth_logins` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `user_id` int unsigned DEFAULT NULL,
+  `date` datetime NOT NULL,
+  `success` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `email` (`email`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_logins`
+--
+
+LOCK TABLES `auth_logins` WRITE;
+/*!40000 ALTER TABLE `auth_logins` DISABLE KEYS */;
+INSERT INTO `auth_logins` VALUES (1,'127.0.0.1','admin@demo.com',1,'2023-06-02 09:46:49',1),(2,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:06:09',1),(3,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:22:18',1),(4,'127.0.0.1','admin@demo.com',1,'2023-06-05 03:49:23',1);
+/*!40000 ALTER TABLE `auth_logins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auth_permissions` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_permissions`
+--
+
+LOCK TABLES `auth_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_reset_attempts`
+--
+
+DROP TABLE IF EXISTS `auth_reset_attempts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auth_reset_attempts` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `ip_address` varchar(255) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_reset_attempts`
+--
+
+LOCK TABLES `auth_reset_attempts` WRITE;
+/*!40000 ALTER TABLE `auth_reset_attempts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_reset_attempts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_tokens`
+--
+
+DROP TABLE IF EXISTS `auth_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auth_tokens` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `selector` varchar(255) NOT NULL,
+  `hashedValidator` varchar(255) NOT NULL,
+  `user_id` int unsigned NOT NULL,
+  `expires` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `auth_tokens_user_id_foreign` (`user_id`),
+  KEY `selector` (`selector`),
+  CONSTRAINT `auth_tokens_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_tokens`
+--
+
+LOCK TABLES `auth_tokens` WRITE;
+/*!40000 ALTER TABLE `auth_tokens` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_users_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_users_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `auth_users_permissions` (
+  `user_id` int unsigned NOT NULL DEFAULT '0',
+  `permission_id` int unsigned NOT NULL DEFAULT '0',
+  KEY `auth_users_permissions_permission_id_foreign` (`permission_id`),
+  KEY `user_id_permission_id` (`user_id`,`permission_id`),
+  CONSTRAINT `auth_users_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `auth_permissions` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `auth_users_permissions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_users_permissions`
+--
+
+LOCK TABLES `auth_users_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_users_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_users_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `fitur`
@@ -281,7 +323,7 @@ CREATE TABLE `konsumen` (
   `alamat` varchar(50) NOT NULL,
   `tanggalLahir` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -290,7 +332,7 @@ CREATE TABLE `konsumen` (
 
 LOCK TABLES `konsumen` WRITE;
 /*!40000 ALTER TABLE `konsumen` DISABLE KEYS */;
-INSERT INTO `konsumen` VALUES (1,'Muhamad abi saleh','082238204776','jl.baru','1999-09-06 00:00:00'),(2,'amin','0822','jlbaru','1999-09-06 00:00:00');
+INSERT INTO `konsumen` VALUES (1,'Muhamad abi saleh','082238204776','jl.baru','1999-09-06 00:00:00'),(2,'amin','0822','jlbaru','1999-09-06 00:00:00'),(3,'Ranu Lappu','082238204776','Abepura','2023-06-02 00:00:00');
 /*!40000 ALTER TABLE `konsumen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -339,7 +381,7 @@ CREATE TABLE `migrations` (
   `time` int NOT NULL,
   `batch` int unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -348,7 +390,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (2,'2023-02-28-033912','App\\Database\\Migrations\\Spkv2','default','App',1679274888,1);
+INSERT INTO `migrations` VALUES (2,'2023-02-28-033912','App\\Database\\Migrations\\Spkv2','default','App',1679274888,1),(3,'2017-11-20-223112','App\\Database\\Migrations\\CreateAuthTables','default','App',1685699158,2),(4,'2017-11-20-223112','Myth\\Auth\\Database\\Migrations\\CreateAuthTables','default','Myth\\Auth',1685699158,2);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -370,7 +412,7 @@ CREATE TABLE `pesanan` (
   KEY `pesanan_fkKonsumen_foreign` (`fkKonsumen`),
   CONSTRAINT `pesanan_fkKonsumen_foreign` FOREIGN KEY (`fkKonsumen`) REFERENCES `konsumen` (`id`) ON DELETE CASCADE,
   CONSTRAINT `pesanan_fkProduk_foreign` FOREIGN KEY (`fkProduk`) REFERENCES `produk` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -379,7 +421,7 @@ CREATE TABLE `pesanan` (
 
 LOCK TABLES `pesanan` WRITE;
 /*!40000 ALTER TABLE `pesanan` DISABLE KEYS */;
-INSERT INTO `pesanan` VALUES (1,'2023-05-02 01:25:42','selesai',15,1),(2,'2023-05-02 01:55:13','dikirim',2,2);
+INSERT INTO `pesanan` VALUES (1,'2023-05-02 01:25:42','selesai',15,1),(2,'2023-05-02 01:55:13','dikirim',2,2),(3,'2023-06-02 09:49:55','pending',2,3);
 /*!40000 ALTER TABLE `pesanan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -470,6 +512,45 @@ LOCK TABLES `subkriteria` WRITE;
 INSERT INTO `subkriteria` VALUES (1,'1',1,16),(4,'100-300',1,1),(12,'300-600',2,1),(18,'600-900',3,1),(24,'2',2,16),(31,'otomatis',2,10),(32,'manual',1,10),(43,'kecil',5,13),(44,'sedang',3,13),(45,'besar',1,13),(50,'panasonic',1,15),(51,'toshiba',2,15),(52,'polytron',3,15),(53,'samsung',4,15),(54,'sharp',4,15),(55,'sanyo',5,15),(57,'0-3.000.000',1,11),(58,'3.000.000-6.000.000',2,11),(59,'6.000.000-9.000.000',3,11),(60,'0-100',1,14),(61,'100-300',2,14),(62,'300-500',3,14),(63,'500-1000',4,14),(64,'5-8',1,12),(65,'8-10',2,12),(66,'10-15',3,12),(67,'0-50',1,2),(68,'50-100',2,2),(69,'100-150',3,2),(70,'0-3.000.000',1,3),(71,'3.000.000-6.000.000',2,3),(72,'6.000.000-9.000.000',3,3),(73,'polytron',1,4),(74,'sharp',2,4),(75,'LG',3,4),(76,'Samsung',4,4),(77,'SANKEN',5,4),(78,'0-3.000.000',1,5),(79,'3.000.000-6.000.000',2,5),(80,'6.000.000-9.000.000',3,5),(81,'3',7,6),(82,'2',6,6),(83,'1',5,6),(84,'5/2',4,6),(85,'3/2',3,6),(86,'3/4',2,6),(87,'1/2',1,6),(88,'0-100',1,7),(89,'100-500',2,7),(90,'500-1000',3,7),(91,'1000-2000',4,7),(92,'LG',1,9),(93,'Sharp',2,9),(94,'Polytron',3,9),(95,'Daikin',4,9),(96,'Samsung',5,9);
 /*!40000 ALTER TABLE `subkriteria` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `username` varchar(30) DEFAULT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `reset_hash` varchar(255) DEFAULT NULL,
+  `reset_at` datetime DEFAULT NULL,
+  `reset_expires` datetime DEFAULT NULL,
+  `activate_hash` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `status_message` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `force_pass_reset` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin@demo.com','admin','$2y$10$DFWqcQR0jTvkK4FxTIUStuu2YzVsGc.JnC6myoGkiovrSrgc3GuiK',NULL,NULL,NULL,NULL,NULL,NULL,1,0,'2023-06-02 09:46:28','2023-06-02 09:46:43',NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -480,4 +561,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-10 18:57:48
+-- Dump completed on 2023-06-05 12:52:15
