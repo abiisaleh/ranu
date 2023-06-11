@@ -50,10 +50,6 @@
           <input type="text" class="form-control" id="nama" name="nama" required>
         </div>
         <div class="form-group">
-          <label for="email">Tanggal Lahir</label>
-          <input type="date" class="form-control" id="email" name="tanggalLahir" required>
-        </div>
-        <div class="form-group">
           <label for="telepon">Nomor Telepon</label>
           <input type="tel" class="form-control" id="telepon" name="telp" required>
         </div>
