@@ -37,7 +37,7 @@ $routes->post('/upload(:any)', 'Home::upload$1');
 $routes->post('/smart', 'Home::smart');
 $routes->get('/kriteria/get_data', 'Home::get_data');
 
-$routes->get('/admin/dashboard', 'admin\Dashboard', ['filter' => 'role:admin']);
+$routes->get('/admin/dashboard', 'admin\Dashboard',);
 $routes->get('/admin/produk', 'admin\Produk', ['filter' => 'role:admin']);
 $routes->get('/admin/produk/get_data', 'admin\Produk::get_data', ['filter' => 'role:admin']);
 $routes->get('/admin/produk/form(:any)', 'admin\Produk::form$1', ['filter' => 'role:admin']);
@@ -55,11 +55,12 @@ $routes->post('/admin/kriteria/create_subkriteria', 'admin\Kriteria::create_subk
 $routes->post('/admin/kriteria/get_modalEdit', 'admin\Kriteria::get_modalEdit', ['filter' => 'role:admin']);
 $routes->post('/admin/kriteria/update_subkriteria', 'admin\Kriteria::update_subkriteria', ['filter' => 'role:admin']);
 $routes->post('/admin/kriteria/delete_subkriteria', 'admin\Kriteria::delete_subkriteria', ['filter' => 'role:admin']);
-$routes->get('/admin/pesanan', 'admin\Pesanan', ['filter' => 'role:admin']);
-$routes->get('/admin/pesanan/get_data', 'admin\Pesanan::get_data', ['filter' => 'role:admin']);
-$routes->post('/admin/pesanan/delete', 'admin\Pesanan::delete', ['filter' => 'role:admin']);
-$routes->post('/admin/pesanan/invoice', 'admin\Pesanan::invoice', ['filter' => 'role:admin']);
-$routes->post('/admin/pesanan/verifikasi', 'admin\Pesanan::verifikasi', ['filter' => 'role:admin']);
+
+$routes->get('/admin/pesanan', 'admin\Pesanan');
+$routes->get('/admin/pesanan/get_data', 'admin\Pesanan::get_data');
+$routes->post('/admin/pesanan/delete', 'admin\Pesanan::delete');
+$routes->post('/admin/pesanan/invoice', 'admin\Pesanan::invoice');
+$routes->post('/admin/pesanan/verifikasi', 'admin\Pesanan::verifikasi');
 $routes->get('/admin/laporan', 'admin\Laporan::index', ['filter' => 'role:admin']);
 
 /*

@@ -19,7 +19,7 @@ $uri1 = $uri[1] ?? null;
                 <img src="dist/img/user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">admin</a>
+                <a href="#" class="d-block"><?= user()->username ?></a>
             </div>
         </div>
 
@@ -36,23 +36,25 @@ $uri1 = $uri[1] ?? null;
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin/produk" class="nav-link <?= ($uri1 == 'produk') ? 'active' : '' ?>" id="navProduk">
-                        <i class="nav-icon fas fa-box"></i>
-                        <p>
-                            Produk
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/admin/kriteria" class="nav-link <?= ($uri1 == 'kriteria') ? 'active' : '' ?>" id="navKriteria">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Kriteria
-                            <span class="right badge badge-danger">SMART</span>
-                        </p>
-                    </a>
-                </li>
+                <?php if (in_groups('admin')) : ?>
+                    <li class="nav-item">
+                        <a href="/admin/produk" class="nav-link <?= ($uri1 == 'produk') ? 'active' : '' ?>" id="navProduk">
+                            <i class="nav-icon fas fa-box"></i>
+                            <p>
+                                Produk
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/kriteria" class="nav-link <?= ($uri1 == 'kriteria') ? 'active' : '' ?>" id="navKriteria">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Kriteria
+                                <span class="right badge badge-danger">SMART</span>
+                            </p>
+                        </a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item">
                     <a href="/admin/pesanan" class="nav-link <?= ($uri1 == 'pesanan') ? 'active' : '' ?>" id="navPesanan">
                         <i class="nav-icon fas fa-shopping-cart"></i>
@@ -61,14 +63,16 @@ $uri1 = $uri[1] ?? null;
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="admin/laporan" class="nav-link <?= ($uri1 == 'laporan') ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-print"></i>
-                        <p>
-                            Laporan
-                        </p>
-                    </a>
-                </li>
+                <?php if (in_groups('admin')) : ?>
+                    <li class="nav-item">
+                        <a href="admin/laporan" class="nav-link <?= ($uri1 == 'laporan') ? 'active' : '' ?>">
+                            <i class="nav-icon fas fa-print"></i>
+                            <p>
+                                Laporan
+                            </p>
+                        </a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

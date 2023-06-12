@@ -9,6 +9,7 @@ class Demo extends Seeder
     public function run()
     {
         $authorize = $auth = service('authorization');
-        $authorize->addUserToGroup(1, 'admin');
+        // $authorize->addUserToGroup(1, 'admin');
+        $authorize->addUserToGroup(2, 'kurir');
     }
 }

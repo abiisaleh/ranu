@@ -53,7 +53,7 @@ CREATE TABLE `auth_groups` (
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `auth_groups` (
 
 LOCK TABLES `auth_groups` WRITE;
 /*!40000 ALTER TABLE `auth_groups` DISABLE KEYS */;
-INSERT INTO `auth_groups` VALUES (1,'admin','kelola admin');
+INSERT INTO `auth_groups` VALUES (1,'admin','kelola admin'),(2,'kurir','kelola kurir');
 /*!40000 ALTER TABLE `auth_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +115,7 @@ CREATE TABLE `auth_groups_users` (
 
 LOCK TABLES `auth_groups_users` WRITE;
 /*!40000 ALTER TABLE `auth_groups_users` DISABLE KEYS */;
-INSERT INTO `auth_groups_users` VALUES (1,1);
+INSERT INTO `auth_groups_users` VALUES (1,1),(2,2);
 /*!40000 ALTER TABLE `auth_groups_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,7 +136,7 @@ CREATE TABLE `auth_logins` (
   PRIMARY KEY (`id`),
   KEY `email` (`email`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +145,7 @@ CREATE TABLE `auth_logins` (
 
 LOCK TABLES `auth_logins` WRITE;
 /*!40000 ALTER TABLE `auth_logins` DISABLE KEYS */;
-INSERT INTO `auth_logins` VALUES (1,'127.0.0.1','admin@demo.com',1,'2023-06-02 09:46:49',1),(2,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:06:09',1),(3,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:22:18',1),(4,'127.0.0.1','admin@demo.com',1,'2023-06-05 03:49:23',1);
+INSERT INTO `auth_logins` VALUES (1,'127.0.0.1','admin@demo.com',1,'2023-06-02 09:46:49',1),(2,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:06:09',1),(3,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:22:18',1),(4,'127.0.0.1','admin@demo.com',1,'2023-06-05 03:49:23',1),(5,'127.0.0.1','admin@demo.com',1,'2023-06-11 12:19:23',1),(6,'127.0.0.1','kurir@demo.com',2,'2023-06-12 23:05:11',1),(7,'127.0.0.1','kurir@demo.com',2,'2023-06-12 23:13:33',1);
 /*!40000 ALTER TABLE `auth_logins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -323,7 +323,7 @@ CREATE TABLE `konsumen` (
   `alamat` varchar(50) NOT NULL,
   `tanggalLahir` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -332,7 +332,7 @@ CREATE TABLE `konsumen` (
 
 LOCK TABLES `konsumen` WRITE;
 /*!40000 ALTER TABLE `konsumen` DISABLE KEYS */;
-INSERT INTO `konsumen` VALUES (1,'Muhamad abi saleh','082238204776','jl.baru','1999-09-06 00:00:00'),(2,'amin','0822','jlbaru','1999-09-06 00:00:00'),(3,'Ranu Lappu','082238204776','Abepura','2023-06-02 00:00:00');
+INSERT INTO `konsumen` VALUES (1,'Muhamad abi saleh','082238204776','jl.baru','1999-09-06 00:00:00'),(2,'amin','0822','jlbaru','1999-09-06 00:00:00'),(3,'Ranu Lappu','082238204776','Abepura','2023-06-02 00:00:00'),(4,'ranu','092092','Abepura','2023-01-03 00:00:00'),(5,'abi saleh','86787','asds','2023-06-05 00:00:00'),(6,'Abi','0822','Abe','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `konsumen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -412,7 +412,7 @@ CREATE TABLE `pesanan` (
   KEY `pesanan_fkKonsumen_foreign` (`fkKonsumen`),
   CONSTRAINT `pesanan_fkKonsumen_foreign` FOREIGN KEY (`fkKonsumen`) REFERENCES `konsumen` (`id`) ON DELETE CASCADE,
   CONSTRAINT `pesanan_fkProduk_foreign` FOREIGN KEY (`fkProduk`) REFERENCES `produk` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -421,7 +421,7 @@ CREATE TABLE `pesanan` (
 
 LOCK TABLES `pesanan` WRITE;
 /*!40000 ALTER TABLE `pesanan` DISABLE KEYS */;
-INSERT INTO `pesanan` VALUES (1,'2023-05-02 01:25:42','selesai',15,1),(2,'2023-05-02 01:55:13','dikirim',2,2),(3,'2023-06-02 09:49:55','pending',2,3);
+INSERT INTO `pesanan` VALUES (1,'2023-05-02 01:25:42','selesai',15,1),(2,'2023-05-02 01:55:13','dikirim',2,2),(3,'2023-06-12 23:10:15','dikirim',2,3),(4,'2023-06-05 05:15:46','pending',2,4),(5,'2023-06-05 05:29:42','pending',21,5),(6,'2023-06-11 12:18:58','pending',85,6);
 /*!40000 ALTER TABLE `pesanan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -539,7 +539,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -548,7 +548,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin@demo.com','admin','$2y$10$DFWqcQR0jTvkK4FxTIUStuu2YzVsGc.JnC6myoGkiovrSrgc3GuiK',NULL,NULL,NULL,NULL,NULL,NULL,1,0,'2023-06-02 09:46:28','2023-06-02 09:46:43',NULL);
+INSERT INTO `users` VALUES (1,'admin@demo.com','admin','$2y$10$DFWqcQR0jTvkK4FxTIUStuu2YzVsGc.JnC6myoGkiovrSrgc3GuiK',NULL,NULL,NULL,NULL,NULL,NULL,1,0,'2023-06-02 09:46:28','2023-06-02 09:46:43',NULL),(2,'kurir@demo.com','kurir','$2y$10$8Qu40clj02t4XLf4/KoPtewc2Q5lrSB9txBfaJEKjBaipNRpFWV6G',NULL,NULL,NULL,NULL,NULL,NULL,1,0,'2023-06-12 23:02:55','2023-06-12 23:03:11',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -561,4 +561,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-05 12:52:15
+-- Dump completed on 2023-06-13  8:14:20
