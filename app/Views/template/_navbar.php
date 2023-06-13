@@ -15,10 +15,10 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
+                        <li class="nav-item <?= (uri_string() == 'produk') ? '' : 'active'; ?>">
                             <a class="nav-link" href="#home">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item <?= (uri_string() == 'produk') ? 'active' : ''; ?>">
                             <a class="nav-link" href="produk">Produk</a>
                         </li>
                         <li class="nav-item">

@@ -15,7 +15,7 @@
                 <p>
                   Central Plaza Elektronik adalah toko elektronik yang menyediakan banyak barang elektronik yang bisa anda beli dan kualitas barang terbaik serta harga yang terjangkau anda bisa dapatkan ditoko kami.
                 </p>
-                <a href="#produk">
+                <a href="produk">
                   Lihat Produk
                 </a>
               </div>

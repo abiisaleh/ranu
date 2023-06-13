@@ -15,7 +15,7 @@
   <title>Plaza Elektronik</title>
 
   <!-- lokasi js dan css admin LTE di codeigniter -->
-  <base href="<?= base_url() ?>/">
+  <base href="<?= base_url() ?>">
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="dist2/css/bootstrap.css" />
