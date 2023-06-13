@@ -30,13 +30,13 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/produk', 'Home::produk');
-$routes->get('/produk/(:num)', 'Home::produk$1');
-$routes->post('/pesan', 'Home::pesan');
-$routes->get('/pembayaran(:any)', 'Home::pembayaran$1');
-$routes->post('/upload(:any)', 'Home::upload$1');
-$routes->post('/smart', 'Home::smart');
-$routes->get('/kriteria/get_data', 'Home::get_data');
+$routes->get('produk', 'Home::produk');
+$routes->get('produk/(:num)', 'Home::produk/$1');
+$routes->post('pesan', 'Home::pesan');
+$routes->get('pembayaran(:any)', 'Home::pembayaran$1');
+$routes->post('upload(:any)', 'Home::upload$1');
+$routes->post('smart', 'Home::smart');
+$routes->get('kriteria/get_data', 'Home::get_data');
 
 $routes->get('/admin/dashboard', 'admin\Dashboard',);
 $routes->get('/admin/produk', 'admin\Produk', ['filter' => 'role:admin']);
