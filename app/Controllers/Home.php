@@ -42,9 +42,19 @@ class Home extends BaseController
         return view('pages/user/index', $data);
     }
 
-    public function produk($id)
+    public function produk($id = null)
     {
         helper('form');
+
+        if (is_null($id)) {
+            $data = [
+                'kriteria' => $this->kriteriaModel->findAll(),
+                'jenis' => $this->jenisModel->findAll(),
+                'produk' => $this->produkModel->join('jenis', 'fkJenis = jenis.id')->orderBy('RAND()')->select('produk.id as id,merek,model,harga,jenis.nama as jenis')->limit(9)->find(),
+            ];
+
+            return view('pages/user/produk', $data);
+        }
 
         $data = [
             'produk' => $this->produkModel->join('jenis', 'fkJenis = jenis.id')->select('produk.*, jenis.nama as nama')->find($id),
