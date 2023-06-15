@@ -81,4 +81,23 @@ class Pesanan extends BaseController
             exit('404 Not Found');
         }
     }
+
+    public function upload()
+    {
+        $id = $this->request->getPost('id');
+        $file = $this->request->getFile('gambar');
+
+        $file->move(FCPATH . 'uploads', $id . '-kirim.jpg', true);
+
+        //ubah status
+        $data = [
+            'id' => $id,
+            'status' => 'selesai'
+        ];
+        $this->pesananModel->save($data);
+
+        dd($file->hasMoved());
+
+        return redirect()->back();
+    }
 }

@@ -53,6 +53,27 @@
                 <a href="../../uploads/<?= $pesanan['id'] ?>-nota.jpg">
                   <img src="../../uploads/<?= $pesanan['id'] ?>-nota.jpg" alt="Bukti Pembayaran" width="200">
                 </a>
+
+                <?php if ($pesanan['status'] == 'dikirim') : ?>
+                  <form method="post" action="admin/pesanan/upload" enctype="multipart/form-data">
+                    <div class="form-group mt-2">
+                      <input type="hidden" name="id" value="<?= $pesanan['id'] ?>">
+                      <label for="inputgambar">Foto Pengiriman</label>
+                      <div class="input-group">
+                        <div class="custom-file">
+                          <input type="file" name="gambar" class="custom-file-input" id="inputgambar">
+                          <label class="custom-file-label" for="inputgambar">Choose file</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-success float-right"><i class="fas fa-print"></i> Upload</button>
+                  </form>
+                <?php elseif ($pesanan['status'] == 'selesai') : ?>
+                  <p class="lead">Bukti Pngiriman</p>
+                  <a href="../../uploads/<?= $pesanan['id'] ?>-kirim.jpg">
+                    <img src="../../uploads/<?= $pesanan['id'] ?>-kirim.jpg" alt="Bukti Pengiriman" width="200">
+                  </a>
+                <?php endif; ?>
               </div>
               <!-- /.col -->
             </div>
@@ -70,10 +91,7 @@
                   <button type="button" class="btn btn-warning float-right" style="margin-right: 5px;" onclick="kirim(<?= $pesanan['id'] ?>)"><i class="far fa-credit-card"></i>
                     Kirim
                   </button>
-                <?php elseif ($pesanan['status'] == 'dikirim') : ?>
-                  <button href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-success float-right" onclick="selesai(<?= $pesanan['id'] ?>)"><i class="fas fa-print"></i> Selesai</button>
                 <?php endif; ?>
-
               </div>
             </div>
             </div>

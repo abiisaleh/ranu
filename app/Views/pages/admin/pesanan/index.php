@@ -45,8 +45,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="invoiceModal">
-      </div>
+      <div class="modal-body" id="invoiceModal"></div>
     </div>
     <!-- /.modal-content -->
   </div>
@@ -145,6 +144,7 @@
       success: function(response) {
         $('#invoiceModal').html(response.output)
         $('#modal-pesanan').modal('show')
+        bsCustomFileInput.init()
       },
       error: function(xhr, ajaxOptions, thrownError) {
         alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError)
