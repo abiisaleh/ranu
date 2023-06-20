@@ -140,7 +140,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Lokasi Kami</h5>
                         <div style="height:400px;width:100%;">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020267.5624655023!2d139.80692747303317!3d-2.6905199224516325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf58dc86fcbeb%3A0x7bfcdf343c604b40!2sCentral%20Plaza%20Electronic!5e0!3m2!1sid!2sid!4v1680327286539!5m2!1sid!2sid" height="400" width="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3985.6766195025007!2d140.6641821!3d-2.6108866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf59b7c2f6c31%3A0x32c25145dbc6db83!2sCentral%20Plasa!5e0!3m2!1sid!2sid!4v1687301625879!5m2!1sid!2sid" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                       </div>
                     </div>
@@ -150,10 +150,9 @@
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title">Kontak Kami</h5>
-                        <p><strong>Alamat:</strong> Jl. Raya Jakarta No. 123, Jakarta</p>
-                        <p><strong>Email:</strong> info@company.com</p>
-                        <p><strong>Telepon:</strong> 021-123456</p>
-                        <p><strong>Website:</strong> www.company.com</p>
+                        <p><strong>Alamat:</strong> Saga Mall Abepura</p>
+                        <p><strong>Facebook:</strong> central.electrnic.453</p>
+                        <p><strong>Telepon:</strong> 08124801158</p>
                       </div>
                     </div>
                   </div>
@@ -173,7 +172,8 @@
                       <div class="card-body">
                         <h5 class="card-title">Lokasi Kami</h5>
                         <div style="height:400px;width:100%;">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020267.5624655023!2d139.80692747303317!3d-2.6905199224516325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf58dc86fcbeb%3A0x7bfcdf343c604b40!2sCentral%20Plaza%20Electronic!5e0!3m2!1sid!2sid!4v1680327286539!5m2!1sid!2sid" height="400" width="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.306686643516!2d140.70386440508506!3d-2.541528152358041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686c59717631129d%3A0x8ea4700b4be0ea9c!2sTaman%20Imbi%20Jayapura!5e0!3m2!1sid!2sid!4v1687301251446!5m2!1sid!2sid" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                       </div>
                     </div>
@@ -183,10 +183,9 @@
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title">Kontak Kami</h5>
-                        <p><strong>Alamat:</strong> Jl. Raya Jakarta No. 123, Jakarta</p>
-                        <p><strong>Email:</strong> info@company.com</p>
-                        <p><strong>Telepon:</strong> 021-123456</p>
-                        <p><strong>Website:</strong> www.company.com</p>
+                        <p><strong>Alamat:</strong> Jl. Irian Taman Imbi Jayapura</p>
+                        <p><strong>Facebook:</strong> central.electrnic.453</p>
+                        <p><strong>Telepon:</strong> 08124801158</p>
                       </div>
                     </div>
                   </div>
@@ -206,7 +205,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Lokasi Kami</h5>
                         <div style="height:400px;width:100%;">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020267.5624655023!2d139.80692747303317!3d-2.6905199224516325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf58dc86fcbeb%3A0x7bfcdf343c604b40!2sCentral%20Plaza%20Electronic!5e0!3m2!1sid!2sid!4v1680327286539!5m2!1sid!2sid" height="400" width="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1992.837354207483!2d140.6653429!3d-2.611489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf58dc86fcbeb%3A0x7bfcdf343c604b40!2sCentral%20Plaza%20Electronic!5e0!3m2!1sid!2sid!4v1687301477657!5m2!1sid!2sid" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                       </div>
                     </div>
@@ -216,10 +215,9 @@
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title">Kontak Kami</h5>
-                        <p><strong>Alamat:</strong> Jl. Raya Jakarta No. 123, Jakarta</p>
-                        <p><strong>Email:</strong> info@company.com</p>
-                        <p><strong>Telepon:</strong> 021-123456</p>
-                        <p><strong>Website:</strong> www.company.com</p>
+                        <p><strong>Alamat:</strong> Central Plaza Abepura</p>
+                        <p><strong>Facebook:</strong> central.electrnic.453</p>
+                        <p><strong>Telepon:</strong> 08124801158</p>
                       </div>
                     </div>
                   </div>
