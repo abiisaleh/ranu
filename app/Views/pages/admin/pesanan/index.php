@@ -73,12 +73,28 @@
 <!-- Page specific script -->
 <script>
   function tabel() {
-    $("#tabel").DataTable({
+    var dataTable = $("#tabel").DataTable({
       "responsive": true,
       "lengthChange": false,
       "autoWidth": false,
-      "buttons": ["pdf", "print"]
-    }).buttons().container().appendTo('#tabel_wrapper .col-md-6:eq(0)');
+      "buttons": ["pdf", "print"],
+      "order": [
+        [3, 'desc']
+      ],
+    })
+
+    dataTable.buttons().container().appendTo('#tabel_wrapper .col-md-6:eq(0)')
+
+    dataTable.on('order.dt search.dt', function() {
+      let i = 1;
+
+      dataTable.cells(null, 0, {
+        search: 'applied',
+        order: 'applied'
+      }).every(function(cell) {
+        this.data(i++);
+      });
+    }).draw();;
   }
 
   function get_data() {

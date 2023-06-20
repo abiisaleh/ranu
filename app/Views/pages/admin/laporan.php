@@ -92,8 +92,27 @@
         "lengthChange": false,
         "autoWidth": false,
         "dom": 'Bfrtip',
-        "buttons": ["pdf", "print"]
+        "buttons": ["pdf", "print"],
+        "columnDefs": [{
+            searchable: false,
+            orderable: false,
+            targets: 0,
+        }],
+        "order": [
+            [3, 'desc']
+        ]
     })
+
+    dataTable.on('order.dt search.dt', function() {
+        let i = 1;
+
+        dataTable.cells(null, 0, {
+            search: 'applied',
+            order: 'applied'
+        }).every(function(cell) {
+            this.data(i++);
+        });
+    }).draw();
 
     dataTable.buttons().container().appendTo('#tabel_wrapper .col-md-6:eq(0)');
 
