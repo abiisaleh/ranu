@@ -14,7 +14,7 @@ class ProdukModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['merek', 'model', 'harga', 'fkJenis'];
+    protected $allowedFields    = ['id', 'merek', 'model', 'harga', 'fkJenis'];
 
     // Dates
     protected $useTimestamps = false;

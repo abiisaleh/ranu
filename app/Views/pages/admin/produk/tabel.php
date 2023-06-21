@@ -5,6 +5,7 @@
     <th>Merek</th>
     <th>Model</th>
     <th>Harga</th>
+    <th>Stok</th>
     <th>Aksi</th>
   </tr>
 </thead>
@@ -20,6 +21,7 @@
       <td><?= $Produk['merek'] ?></td>
       <td><?= $Produk['model'] ?></td>
       <td><?= number_format($Produk['harga']) ?></td>
+      <td><?= $Produk['stok'] ?></td>
       <td>
         <a class="btn btn-warning btn-sm" href="admin/produk/form/<?= $Produk['fkJenis'] ?>/<?= $Produk['id'] ?>">
           <i class="fas fa-edit"></i>

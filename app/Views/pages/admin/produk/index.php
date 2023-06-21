@@ -30,6 +30,7 @@
             <th>Merek</th>
             <th>Model</th>
             <th>Harga</th>
+            <th>Stok</th>
             <th>Aksi</th>
           </tr>
         </thead>

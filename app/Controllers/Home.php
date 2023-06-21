@@ -86,13 +86,27 @@ class Home extends BaseController
     {
         $konsumen = $this->request->getVar();
         $this->konsumenModel->insert($konsumen);
+        $idProduk = $this->request->getVar('fkProduk');
 
         $pesanan = [
             'status' => 'pending',
-            'fkProduk' => $this->request->getVar('fkProduk'),
+            'fkProduk' => $idProduk,
             'fkKonsumen' => $this->konsumenModel->insertID(),
         ];
         $this->pesananModel->insert($pesanan);
+
+        //kurangi stok produk 
+        $produk = $this->produkModel->find($idProduk);
+
+        $stok = [
+            'id' => intval($idProduk),
+            'stok' => $produk['stok'] - 1,
+        ];
+
+        d($stok);
+        d($produk);
+        dd($this->produkModel->save($stok));
+
         $id = $this->pesananModel->getInsertID();
 
         return redirect()->to('pembayaran/' . $id);

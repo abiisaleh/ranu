@@ -21,9 +21,12 @@
           <?php endforeach; ?>
         </ul>
         <hr>
+        <p class="lead">Stok: <span class="font-weight-bold"><?= $produk['stok'] ?></span></p>
         <p class="lead">Harga: <span class="font-weight-bold">Rp. <?= number_format($produk['harga']) ?></span></p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start btn_box">
-          <btn class="view_more-link mr-2" data-toggle="modal" data-target="#pesanModal">Pesan Sekarang</btn>
+          <?php if ($produk['stok'] != 0) : ?>
+            <button class="view_more-link mr-2" data-toggle="modal" data-target="#pesanModal">Pesan Sekarang</button>
+          <?php endif; ?>
           <a class="btn btn-outline-secondary" href="javascript:window.history.back();" style="padding: 10px 15px">Kembali</a>
         </div>
       </div>
