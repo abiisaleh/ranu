@@ -14,7 +14,7 @@ class PesananModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['tanggal', 'status', 'fkProduk', 'fkKonsumen'];
+    protected $allowedFields    = ['tanggal', 'status', 'fkProduk', 'fkKonsumen', 'tanggal_diproses', 'tanggal_pengiriman'];
 
     // Dates
     protected $useTimestamps = false;
@@ -46,6 +46,6 @@ class PesananModel extends Model
             ->join('konsumen', 'konsumen.id = fkKonsumen')
             ->join('produk', 'produk.id = fkProduk')
             ->join('jenis', 'jenis.id = produk.fkJenis')
-            ->select('konsumen.*, produk.*, tanggal, status, pesanan.id as id, jenis.nama as jenis');
+            ->select('konsumen.*, produk.*, tanggal, status, pesanan.id as id, jenis.nama as jenis, tanggal_diproses, tanggal_pengiriman');
     }
 }

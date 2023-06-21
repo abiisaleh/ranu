@@ -37,7 +37,7 @@
 <!-- /.col -->
 
 <div class="modal fade" id="modal-pesanan">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Nota Pesanan</h4>

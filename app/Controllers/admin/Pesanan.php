@@ -74,7 +74,8 @@ class Pesanan extends BaseController
             $status = $this->request->getVar('status');
             $data = [
                 'id' => $id,
-                'status' => $status
+                'status' => $status,
+                'tanggal_diproses' => date('Y-m-d H:i:s')
             ];
             $this->pesananModel->save($data);
         } else {
@@ -92,11 +93,10 @@ class Pesanan extends BaseController
         //ubah status
         $data = [
             'id' => $id,
-            'status' => 'selesai'
+            'status' => 'selesai',
+            'tanggal_pengiriman' => date('Y-m-d')
         ];
         $this->pesananModel->save($data);
-
-        dd($file->hasMoved());
 
         return redirect()->back();
     }
