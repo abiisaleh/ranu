@@ -136,7 +136,7 @@ CREATE TABLE `auth_logins` (
   PRIMARY KEY (`id`),
   KEY `email` (`email`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +145,7 @@ CREATE TABLE `auth_logins` (
 
 LOCK TABLES `auth_logins` WRITE;
 /*!40000 ALTER TABLE `auth_logins` DISABLE KEYS */;
-INSERT INTO `auth_logins` VALUES (1,'127.0.0.1','admin@demo.com',1,'2023-06-02 09:46:49',1),(2,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:06:09',1),(3,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:22:18',1),(4,'127.0.0.1','admin@demo.com',1,'2023-06-05 03:49:23',1),(5,'127.0.0.1','admin@demo.com',1,'2023-06-11 12:19:23',1),(6,'127.0.0.1','kurir@demo.com',2,'2023-06-12 23:05:11',1),(7,'127.0.0.1','kurir@demo.com',2,'2023-06-12 23:13:33',1);
+INSERT INTO `auth_logins` VALUES (1,'127.0.0.1','admin@demo.com',1,'2023-06-02 09:46:49',1),(2,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:06:09',1),(3,'127.0.0.1','admin@demo.com',1,'2023-06-02 10:22:18',1),(4,'127.0.0.1','admin@demo.com',1,'2023-06-05 03:49:23',1),(5,'127.0.0.1','admin@demo.com',1,'2023-06-11 12:19:23',1),(6,'127.0.0.1','kurir@demo.com',2,'2023-06-12 23:05:11',1),(7,'127.0.0.1','kurir@demo.com',2,'2023-06-12 23:13:33',1),(8,'127.0.0.1','admin@demo.com',1,'2023-06-15 04:09:54',1),(9,'127.0.0.1','admin@demo.com',1,'2023-06-15 12:26:50',1),(10,'127.0.0.1','admin@demo.com',1,'2023-06-20 22:26:13',1),(11,'127.0.0.1','kurir@demo.com',2,'2023-06-21 00:16:18',1);
 /*!40000 ALTER TABLE `auth_logins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -323,7 +323,7 @@ CREATE TABLE `konsumen` (
   `alamat` varchar(50) NOT NULL,
   `tanggalLahir` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -332,7 +332,7 @@ CREATE TABLE `konsumen` (
 
 LOCK TABLES `konsumen` WRITE;
 /*!40000 ALTER TABLE `konsumen` DISABLE KEYS */;
-INSERT INTO `konsumen` VALUES (1,'Muhamad abi saleh','082238204776','jl.baru','1999-09-06 00:00:00'),(2,'amin','0822','jlbaru','1999-09-06 00:00:00'),(3,'Ranu Lappu','082238204776','Abepura','2023-06-02 00:00:00'),(4,'ranu','092092','Abepura','2023-01-03 00:00:00'),(5,'abi saleh','86787','asds','2023-06-05 00:00:00'),(6,'Abi','0822','Abe','0000-00-00 00:00:00');
+INSERT INTO `konsumen` VALUES (1,'Muhamad abi saleh','082238204776','jl.baru','1999-09-06 00:00:00'),(2,'amin','0822','jlbaru','1999-09-06 00:00:00'),(3,'Ranu Lappu','082238204776','Abepura','2023-06-02 00:00:00'),(4,'ranu','092092','Abepura','2023-01-03 00:00:00'),(5,'abi saleh','86787','asds','2023-06-05 00:00:00'),(6,'Abi','0822','Abe','0000-00-00 00:00:00'),(7,'Rahman','082238838','Kotaraja','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `konsumen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -407,12 +407,14 @@ CREATE TABLE `pesanan` (
   `status` enum('pending','dikirim','selesai') NOT NULL DEFAULT 'pending',
   `fkProduk` int NOT NULL,
   `fkKonsumen` int NOT NULL,
+  `tanggal_diproses` datetime DEFAULT NULL,
+  `tanggal_pengiriman` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `pesanan_fkProduk_foreign` (`fkProduk`),
   KEY `pesanan_fkKonsumen_foreign` (`fkKonsumen`),
   CONSTRAINT `pesanan_fkKonsumen_foreign` FOREIGN KEY (`fkKonsumen`) REFERENCES `konsumen` (`id`) ON DELETE CASCADE,
   CONSTRAINT `pesanan_fkProduk_foreign` FOREIGN KEY (`fkProduk`) REFERENCES `produk` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -421,7 +423,6 @@ CREATE TABLE `pesanan` (
 
 LOCK TABLES `pesanan` WRITE;
 /*!40000 ALTER TABLE `pesanan` DISABLE KEYS */;
-INSERT INTO `pesanan` VALUES (1,'2023-05-02 01:25:42','selesai',15,1),(2,'2023-05-02 01:55:13','dikirim',2,2),(3,'2023-06-12 23:10:15','dikirim',2,3),(4,'2023-06-05 05:15:46','pending',2,4),(5,'2023-06-05 05:29:42','pending',21,5),(6,'2023-06-11 12:18:58','pending',85,6);
 /*!40000 ALTER TABLE `pesanan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -509,7 +510,7 @@ CREATE TABLE `subkriteria` (
 
 LOCK TABLES `subkriteria` WRITE;
 /*!40000 ALTER TABLE `subkriteria` DISABLE KEYS */;
-INSERT INTO `subkriteria` VALUES (1,'1',1,16),(4,'100-300',1,1),(12,'300-600',2,1),(18,'600-900',3,1),(24,'2',2,16),(31,'otomatis',2,10),(32,'manual',1,10),(43,'kecil',5,13),(44,'sedang',3,13),(45,'besar',1,13),(50,'panasonic',1,15),(51,'toshiba',2,15),(52,'polytron',3,15),(53,'samsung',4,15),(54,'sharp',4,15),(55,'sanyo',5,15),(57,'0-3.000.000',1,11),(58,'3.000.000-6.000.000',2,11),(59,'6.000.000-9.000.000',3,11),(60,'0-100',1,14),(61,'100-300',2,14),(62,'300-500',3,14),(63,'500-1000',4,14),(64,'5-8',1,12),(65,'8-10',2,12),(66,'10-15',3,12),(67,'0-50',1,2),(68,'50-100',2,2),(69,'100-150',3,2),(70,'0-3.000.000',1,3),(71,'3.000.000-6.000.000',2,3),(72,'6.000.000-9.000.000',3,3),(73,'polytron',1,4),(74,'sharp',2,4),(75,'LG',3,4),(76,'Samsung',4,4),(77,'SANKEN',5,4),(78,'0-3.000.000',1,5),(79,'3.000.000-6.000.000',2,5),(80,'6.000.000-9.000.000',3,5),(81,'3',7,6),(82,'2',6,6),(83,'1',5,6),(84,'5/2',4,6),(85,'3/2',3,6),(86,'3/4',2,6),(87,'1/2',1,6),(88,'0-100',1,7),(89,'100-500',2,7),(90,'500-1000',3,7),(91,'1000-2000',4,7),(92,'LG',1,9),(93,'Sharp',2,9),(94,'Polytron',3,9),(95,'Daikin',4,9),(96,'Samsung',5,9);
+INSERT INTO `subkriteria` VALUES (1,'1',1,16),(4,'100-300',1,1),(12,'300-600',2,1),(18,'600-900',3,1),(24,'2',2,16),(31,'otomatis',2,10),(32,'manual',1,10),(43,'kecil',5,13),(44,'sedang',3,13),(45,'besar',1,13),(50,'panasonic',1,15),(51,'toshiba',2,15),(52,'polytron',3,15),(53,'samsung',4,15),(54,'sharp',4,15),(55,'sanyo',5,15),(57,'0-3.000.000',1,11),(58,'3.000.000-6.000.000',2,11),(59,'6.000.000-9.000.000',3,11),(60,'0-100',1,14),(61,'100-300',2,14),(62,'300-500',3,14),(63,'500-1000',4,14),(64,'5-8',1,12),(65,'8-10',2,12),(66,'10-15',3,12),(67,'0-50',1,2),(68,'50-100',2,2),(69,'100-150',3,2),(70,'0-3.000.000',1,3),(71,'3.000.000-6.000.000',2,3),(72,'6.000.000-9.000.000',3,3),(73,'polytron',1,4),(74,'sharp',2,4),(75,'LG',3,4),(76,'Samsung',4,4),(77,'SANKEN',5,4),(78,'0-3.000.000',1,5),(79,'3.000.000-6.000.000',2,5),(80,'6.000.000-9.000.000',3,5),(81,'3',7,6),(82,'2',6,6),(83,'1',5,6),(84,'5/2',4,6),(85,'3/2',3,6),(86,'3/4',2,6),(87,'1/2',1,6),(88,'0-500',1,7),(90,'500-1000',2,7),(91,'1000-2000',3,7),(92,'LG',1,9),(93,'Sharp',2,9),(94,'Polytron',3,9),(95,'Daikin',4,9),(96,'Samsung',5,9);
 /*!40000 ALTER TABLE `subkriteria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -561,4 +562,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-13  8:14:20
+-- Dump completed on 2023-06-21 10:39:13
