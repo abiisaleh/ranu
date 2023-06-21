@@ -103,9 +103,7 @@ class Home extends BaseController
             'stok' => $produk['stok'] - 1,
         ];
 
-        d($stok);
-        d($produk);
-        dd($this->produkModel->save($stok));
+        $this->produkModel->save($stok);
 
         $id = $this->pesananModel->getInsertID();
 
@@ -231,7 +229,6 @@ class Home extends BaseController
         }
 
         $data['utility'] = $result; //hasil utility
-
         //Tahap 4 : Nilai Akhir
         foreach ($result as &$Result) {
             //nilaiAkhir = sum(bobot * normlisasi * utility) 
