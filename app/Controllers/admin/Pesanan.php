@@ -90,7 +90,7 @@ class Pesanan extends BaseController
         // Data yang akan dikirim sebagai body request
         $data = [
             'id' => $pesanan['telp'],
-            'message' => 'Pesanan #' . $pesanan['id'] . ' dengan total Rp. ' . number_format($pesanan['harga']) . ' sudah di verifikasi dan akan dikirim ke alamat ' . $pesanan['alamat'],
+            'message' => 'Pesanan #' . $pesanan['id'] . ' dengan total Rp. ' . number_format($pesanan['harga']) . ' sudah di verifikasi dan akan dikirim ke alamat ' . $pesanan['alamat'].'/n/nTerimakasih atas kunjungannya 🙏',
         ];
 
         // Inisialisasi cURL
