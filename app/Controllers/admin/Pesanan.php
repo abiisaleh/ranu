@@ -81,6 +81,38 @@ class Pesanan extends BaseController
         } else {
             exit('404 Not Found');
         }
+
+        $pesanan = $this->pesananModel->joinKonsumenProduk()->find($id);
+
+        // URL endpoint
+        $url = 'https://web-production-d03d.up.railway.app/message/text?key=123';
+
+        // Data yang akan dikirim sebagai body request
+        $data = [
+            'id' => $pesanan['telp'],
+            'message' => 'Pesanan #' . $pesanan['id'] . ' dengan total Rp. ' . number_format($pesanan['harga']) . ' sudah di verifikasi dan akan dikirim ke alamat ' . $pesanan['alamat'],
+        ];
+
+        // Inisialisasi cURL
+        $ch = curl_init();
+
+        // Set URL
+        curl_setopt($ch, CURLOPT_URL, $url);
+
+        // Set metode request menjadi POST
+        curl_setopt($ch, CURLOPT_POST, 1);
+
+        // Set data yang akan dikirim sebagai body request
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+
+        // Jalankan request dan ambil responsenya
+        $response = curl_exec($ch);
+
+        // Tutup koneksi cURL
+        curl_close($ch);
+
+        // Tampilkan responsenya
+        echo $response;
     }
 
     public function upload()
