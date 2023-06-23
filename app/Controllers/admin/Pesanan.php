@@ -85,12 +85,12 @@ class Pesanan extends BaseController
         $pesanan = $this->pesananModel->joinKonsumenProduk()->find($id);
 
         // URL endpoint
-        $url = 'https://web-production-d03d.up.railway.app/message/text?key=123';
+        $url = 'https://web-production-d03d.up.railway.app/message/text?key=ranubot';
 
         // Data yang akan dikirim sebagai body request
         $data = [
             'id' => $pesanan['telp'],
-            'message' => 'Pesanan #' . $pesanan['id'] . ' dengan total Rp. ' . number_format($pesanan['harga']) . ' sudah di verifikasi dan akan dikirim ke alamat ' . $pesanan['alamat'].'/n/nTerimakasih atas kunjungannya 🙏',
+            'message' => 'Pesanan #' . $pesanan['id'] . ' dengan total Rp. ' . number_format($pesanan['harga']) . ' sudah di verifikasi dan akan dikirim ke alamat ' . $pesanan['alamat'] . '/n/nTerimakasih atas kunjungannya 🙏',
         ];
 
         // Inisialisasi cURL
