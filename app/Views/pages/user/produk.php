@@ -122,13 +122,6 @@
                                 <h5>
                                     <span>Rp</span> <?= number_format($Produk['harga']) ?>
                                 </h5>
-                                <div class="star_container">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
                             </div>
                         </div>
                     </div>
