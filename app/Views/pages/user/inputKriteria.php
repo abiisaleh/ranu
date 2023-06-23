@@ -8,7 +8,20 @@
 
                 foreach ($subkriteria as $Subkriteria) :
                 ?>
-                  <option><?= $Subkriteria['nama'] ?></option>
+                  <option value="<?= $Subkriteria['nama'] ?>">
+                    <?php
+                    if ($Kriteria['nama'] == 'DayaListrik')
+                      echo  $Subkriteria['nama'] . ' watt';
+                    elseif ($Kriteria['nama'] == 'Harga')
+                      echo  'Rp. ' . (explode('-', $Subkriteria['nama'])[0]) . ' - Rp. ' . (explode('-', $Subkriteria['nama'])[1]);
+                    elseif ($Kriteria['nama'] == 'JenisKulkas')
+                      echo  $Subkriteria['nama'] . ' pintu';
+                    elseif ($Kriteria['nama'] == 'Tenaga')
+                      echo  $Subkriteria['nama'] . ' PK';
+                    else
+                      echo  $Subkriteria['nama'];
+                    ?>
+                  </option>
                 <?php endforeach; ?>
               </select>
             </div>
