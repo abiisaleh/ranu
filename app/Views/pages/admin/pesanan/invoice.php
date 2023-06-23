@@ -49,7 +49,7 @@
                 <p>pemesanan berhasil dibuat</p>
               </div>
               <div class="col-2">
-                <a href=" ../../uploads/<?= $pesanan['id'] ?>-nota.jpg">lihat foto</a>
+                <a href="../../uploads/<?= $pesanan['id'] ?>-nota.jpg">lihat foto</a>
               </div>
 
               <?php $pesanan['tanggal_diproses'] ?? '' ?>
@@ -72,7 +72,7 @@
                   <p>pemesanan telah sampai</p>
                 </div>
                 <div class="col-2">
-                  <a href="/">lihat foto</a>
+                  <a href="../../uploads/<?= $pesanan['id'] ?>-kirim.jpg">lihat foto</a>
                 </div>
               <?php endif; ?>
 
