@@ -4,36 +4,31 @@
     <div class="container">
         <h1>Rekomendasi Produk</h1>
         <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="box">
-                    <div class="img-box">
-                        <img src="dist2/images/P-<?= $Produk['jenis'] ?>.jpg" alt="">
-                        <a href="/produk/<?= $Produk['id'] ?>" class="add_cart_btn">
-                            <span>
-                                Pesan
-                            </span>
-                        </a>
-                    </div>
-                    <div class="detail-box">
-                        <p><?= $Produk['jenis'] ?></p>
-                        <h5>
-                            <?= $Produk['merek'] ?> <?= strtoupper($Produk['model']) ?>
-                        </h5>
-                        <div class="product_info">
+            <?php foreach ($Produk as $produk) : ?>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="dist2/images/P-<?= $produk['jenis'] ?>.jpg" alt="">
+                            <a href="/produk/<?= $produk['id'] ?>" class="add_cart_btn">
+                                <span>
+                                    Pesan
+                                </span>
+                            </a>
+                        </div>
+                        <div class="detail-box">
+                            <p><?= $produk['jenis'] ?></p>
                             <h5>
-                                <span>Rp</span> <?= number_format($Produk['harga']) ?>
+                                <?= $produk['merek'] ?> <?= strtoupper($produk['model']) ?>
                             </h5>
-                            <div class="star_container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                            <div class="product_info">
+                                <h5>
+                                    <span>Rp</span> <?= number_format($produk['harga']) ?>
+                                </h5>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach ?>
         </div>
 
 

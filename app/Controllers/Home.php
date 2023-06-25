@@ -248,9 +248,16 @@ class Home extends BaseController
         });
 
         $data['nilaiAkhirSort'] = $result; //nilai akhir urutkan terbesar
-        $data['hasil'] = $result[0]; //nilai akhir terbesar
 
-        $data['Produk'] = $this->produkModel->join('jenis', 'fkJenis = jenis.id')->select('produk.id as id,merek,model,harga,jenis.nama as jenis')->find($data['hasil']['id']);
+        $resultMax = $result[0];
+
+        foreach ($result as $Result) {
+            if ($Result == $resultMax) {
+                $data['hasil'][] = $Result;
+                $data['Produk'][] = $this->produkModel->join('jenis', 'fkJenis = jenis.id')->select('produk.id as id,merek,model,harga,jenis.nama as jenis')->find($Result['id']);
+            }
+        }
+        //$data['hasil'] = $result[0]; //nilai akhir terbesar
 
         return view('pages/user/rekomendasi', $data);
     }
