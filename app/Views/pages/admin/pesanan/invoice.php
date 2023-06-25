@@ -85,10 +85,10 @@
                 <div class="form-group mt-2">
                   <input type="hidden" name="id" value="<?= $pesanan['id'] ?>">
                   <div class="form-group">
-                    <label for="inputTanggal">Tanggal Pengiriman</label>
+                    <label for="inputTanggal">Tanggal Pengantaran</label>
                     <input type="datetime-local" class="form-control" id="inputTanggal" placeholder="masukkan tanggal" name="tanggal_pengiriman">
                   </div>
-                  <label for="inputgambar">Foto Pengiriman</label>
+                  <label for="inputgambar">Foto Pengantaran</label>
                   <div class="input-group">
                     <div class="custom-file">
                       <input type="file" name="gambar" class="custom-file-input" id="inputgambar">

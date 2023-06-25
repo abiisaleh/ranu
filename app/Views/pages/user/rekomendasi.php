@@ -31,7 +31,6 @@
             <?php endforeach ?>
         </div>
 
-
         <button class="btn btn-primary d-block" id="btn-show" onclick="show()">Tampilkan Perhitungan</button>
         <button class="btn btn-primary d-none" id="btn-hide" onclick="hide()">Sembunyikan Perhitungan</button>
 
