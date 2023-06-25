@@ -25,9 +25,10 @@ class Pesanan extends BaseController
     public function get_data()
     {
         if ($this->request->isAJAX()) {
-            $data = [
-                'pesanan' => $this->pesananModel->joinKonsumenProduk()->find(),
-            ];
+            if (in_groups('admin'))
+                $data['pesanan'] = $this->pesananModel->joinKonsumenProduk()->find();
+            else
+                $data['pesanan'] = $this->pesananModel->joinKonsumenProduk()->where('status', 'dikirim')->find();
 
             $result = [
                 'output' => view('pages/admin/pesanan/tabel', $data)
@@ -118,6 +119,7 @@ class Pesanan extends BaseController
     public function upload()
     {
         $id = $this->request->getPost('id');
+        $tgl = $this->request->getPost('tanggal_pengiriman');
         $file = $this->request->getFile('gambar');
 
         $file->move(FCPATH . 'uploads', $id . '-kirim.jpg', true);
@@ -126,7 +128,7 @@ class Pesanan extends BaseController
         $data = [
             'id' => $id,
             'status' => 'selesai',
-            'tanggal_pengiriman' => date('Y-m-d')
+            'tanggal_pengiriman' => $tgl
         ];
         $this->pesananModel->save($data);
 

@@ -79,11 +79,15 @@
             </div>
             <!-- /.row -->
 
-            <?php if ($pesanan['status'] == 'dikirim') : ?>
+            <?php if ($pesanan['status'] == 'dikirim' & in_groups('kurir')) : ?>
               <!-- <div class="col-12"> -->
               <form method="post" action="admin/pesanan/upload" enctype="multipart/form-data">
                 <div class="form-group mt-2">
                   <input type="hidden" name="id" value="<?= $pesanan['id'] ?>">
+                  <div class="form-group">
+                    <label for="inputTanggal">Tanggal Pengiriman</label>
+                    <input type="datetime-local" class="form-control" id="inputTanggal" placeholder="masukkan tanggal" name="tanggal_pengiriman">
+                  </div>
                   <label for="inputgambar">Foto Pengiriman</label>
                   <div class="input-group">
                     <div class="custom-file">
@@ -106,7 +110,7 @@
               <div class="col-12">
                 <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
 
-                <?php if ($pesanan['status'] == 'pending') : ?>
+                <?php if ($pesanan['status'] == 'pending' & in_groups('admin')) : ?>
                   <button type="button" class="btn btn-danger float-right" style="margin-right: 5px;">
                     <i class="fas fa-trash"></i> Batal
                   </button>
