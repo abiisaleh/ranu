@@ -18,6 +18,10 @@
                       echo  $Subkriteria['nama'] . ' pintu';
                     elseif ($Kriteria['nama'] == 'Tenaga')
                       echo  $Subkriteria['nama'] . ' PK';
+                    elseif ($Kriteria['nama'] == 'Kapasitas' & $idJenis == '1')
+                      echo  $Subkriteria['nama'] . ' Liter';
+                    elseif ($Kriteria['nama'] == 'Kapasitas' & $idJenis == '3')
+                      echo  $Subkriteria['nama'] . ' Kg';
                     else
                       echo  $Subkriteria['nama'];
                     ?>

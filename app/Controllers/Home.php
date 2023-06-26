@@ -70,6 +70,7 @@ class Home extends BaseController
             $id = $this->request->getVar('id');
             $data = [
                 'kriteria' => $this->kriteriaModel->where('fkJenis', $id)->find(),
+                'idJenis' => $id
             ];
 
             $result = [
