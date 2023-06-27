@@ -6,6 +6,25 @@
 <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 <!-- SweetAlert2 -->
 <link rel="stylesheet" href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
+<style>
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+
+    .modal,
+    .modal * {
+      visibility: visible;
+    }
+
+    .modal-body {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+</style>
 <?= $this->endSection('style'); ?>
 
 <?= $this->section('content'); ?>
@@ -206,6 +225,11 @@
 
   $(document).ready(function() {
     get_data();
+
+    function print() {
+      window.print();
+      console.log('print');
+    }
   });
 </script>
 <?= $this->endSection('script'); ?>

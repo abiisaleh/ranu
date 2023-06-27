@@ -1,5 +1,5 @@
             <!-- Table row -->
-            <div class="row">
+            <div class="row" id="print-content">
               <div class="col-12">
                 <p class="text-bold">No Pesanan: <?= $pesanan['id'] ?></p>
               </div>
@@ -108,7 +108,7 @@
             <!-- this row will not appear when printing -->
             <div class="row no-print">
               <div class="col-12">
-                <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
+                <button type="button" onclick="print()" class="btn btn-default" id="print-button"><i class="fas fa-print"></i> Print</button>
 
                 <?php if ($pesanan['status'] == 'pending' & in_groups('admin')) : ?>
                   <button type="button" class="btn btn-danger float-right" style="margin-right: 5px;">

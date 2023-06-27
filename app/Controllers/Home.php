@@ -164,7 +164,6 @@ class Home extends BaseController
             return $this;
         }
 
-
         //Tahap 1 : Kriteria yang digunakan
         $data['kriteria'] = $kriteria;
 
