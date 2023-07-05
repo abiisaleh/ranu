@@ -146,7 +146,7 @@ class Home extends BaseController
             $input = $this->request->getVar($Kriteria['nama']);
             if ($input != "-") {
                 $id = $Kriteria['id'];
-                if ($Kriteria['nama'] == 'Harga' or $Kriteria['nama'] == 'Kapasitas') {
+                if ($Kriteria['nama'] == 'Harga' or $Kriteria['nama'] == 'Kapasitas' or $Kriteria['nama'] == 'DayaListrik') {
                     $inputHarga = str_replace('.', '', $input);
                     $harga_min = explode('-', $inputHarga)[0];
                     $harga_max = explode('-', $inputHarga)[1];
@@ -177,6 +177,7 @@ class Home extends BaseController
             $Kriteria['normalisasi'] = $Kriteria['bobot'] / $total;
         }
         $data['kriteria'] = $kriteria; //perbarui data kriteria
+
 
         //Tahap 3 : Utility
         $data['alternatif'] = $result; //data alternatif
