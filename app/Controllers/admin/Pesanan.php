@@ -43,7 +43,7 @@ class Pesanan extends BaseController
     public function delete()
     {
         if ($this->request->isAJAX()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getPost('id');
             $this->pesananModel->delete($id);
         } else {
             exit('404 Not Found');
@@ -53,7 +53,7 @@ class Pesanan extends BaseController
     public function invoice()
     {
         if ($this->request->isAjax()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getPost('id');
             $data = [
                 'pesanan' => $this->pesananModel->joinKonsumenProduk()->find($id)
             ];
@@ -71,8 +71,8 @@ class Pesanan extends BaseController
     public function verifikasi()
     {
         if ($this->request->isAjax()) {
-            $id = $this->request->getVar('id');
-            $status = $this->request->getVar('status');
+            $id = $this->request->getPost('id');
+            $status = $this->request->getPost('status');
             $data = [
                 'id' => $id,
                 'status' => $status,

@@ -67,7 +67,7 @@ class Home extends BaseController
     public function get_data()
     {
         if ($this->request->isAjax()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getGet('id');
             $data = [
                 'kriteria' => $this->kriteriaModel->where('fkJenis', $id)->find(),
                 'idJenis' => $id
@@ -85,9 +85,9 @@ class Home extends BaseController
 
     public function pesan()
     {
-        $konsumen = $this->request->getVar();
+        $konsumen = $this->request->getPost();
         $this->konsumenModel->insert($konsumen);
-        $idProduk = $this->request->getVar('fkProduk');
+        $idProduk = $this->request->getPost('fkProduk');
 
         $pesanan = [
             'status' => 'pending',
@@ -131,7 +131,7 @@ class Home extends BaseController
     public function smart()
     {
         //data alternatif
-        $inputJenis = $this->request->getVar('jenis'); //jenis produk
+        $inputJenis = $this->request->getPost('jenis'); //jenis produk
         $kriteria = $this->kriteriaModel->where('fkJenis', $inputJenis)->find(); //kriteria
 
         $db = \Config\Database::connect();
@@ -143,7 +143,7 @@ class Home extends BaseController
         }
         $query = $db->table('produk')->select($select);
         foreach ($kriteria as $Kriteria) {
-            $input = $this->request->getVar($Kriteria['nama']);
+            $input = $this->request->getPost($Kriteria['nama']);
             if ($input != "-") {
                 $id = $Kriteria['id'];
                 if ($Kriteria['nama'] == 'Harga' or $Kriteria['nama'] == 'Kapasitas' or $Kriteria['nama'] == 'DayaListrik') {

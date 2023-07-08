@@ -33,7 +33,7 @@ class Kriteria extends BaseController
     public function get_data()
     {
         if ($this->request->isAJAX()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getPost('id');
 
             $data = [
                 'Jenis' => $this->jenisModel->find($id),
@@ -53,7 +53,7 @@ class Kriteria extends BaseController
     public function create()
     {
         if ($this->request->isAjax()) {
-            $data = $this->request->getVar();
+            $data = $this->request->getPost();
             $this->kriteriaModel->save($data);
 
             $result = [
@@ -70,7 +70,7 @@ class Kriteria extends BaseController
     {
         helper('form');
 
-        $id = $this->request->getVar('id');
+        $id = $this->request->getPost('id');
         $data = [
             'kriteria' => $this->kriteriaModel->find($id)
         ];
@@ -85,7 +85,7 @@ class Kriteria extends BaseController
     public function delete()
     {
         if ($this->request->isAjax()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getPost('id');
             $this->kriteriaModel->delete($id);
 
             $result = [
@@ -113,7 +113,7 @@ class Kriteria extends BaseController
     public function get_subkriteria()
     {
         if ($this->request->isAJAX()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getGet('id');
 
             $data = [
                 'kriteria' => $this->kriteriaModel->find($id),
@@ -154,7 +154,7 @@ class Kriteria extends BaseController
                     ]
                 ];
             } else {
-                $data = $this->request->getVar();
+                $data = $this->request->getPost();
                 $this->subkriteriaModel->save($data);
 
                 $result = [
@@ -171,7 +171,7 @@ class Kriteria extends BaseController
     {
         helper('form');
 
-        $id = $this->request->getVar('id');
+        $id = $this->request->getGet('id');
         $data = [
             'subkriteria' => $this->subkriteriaModel->find($id)
         ];
@@ -188,7 +188,7 @@ class Kriteria extends BaseController
         if ($this->request->isAjax()) {
 
             helper('form');
-            $data = $this->request->getVar();
+            $data = $this->request->getPost();
             $this->subkriteriaModel->save($data);
 
             $result = [
@@ -204,7 +204,7 @@ class Kriteria extends BaseController
     public function delete_subkriteria()
     {
         if ($this->request->isAjax()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getPost('id');
             $this->subkriteriaModel->delete($id);
 
             $result = [

@@ -142,9 +142,9 @@ class Produk extends BaseController
     public function delete()
     {
         if ($this->request->isAjax()) {
-            $id = $this->request->getVar('id');
+            $id = $this->request->getPost('id');
             $this->produkModel->delete($id);
-            
+
             $result = [
                 'output' => 'Data Berhasil Dihapus'
             ];
