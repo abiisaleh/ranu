@@ -55,6 +55,7 @@
         <?php foreach ($jenis as $Jenis) : ?>
           <a class="btn btn-outline-primary btn-block" href="admin/produk/form/<?= $Jenis['id'] ?>">Data <?= $Jenis['nama'] ?> Baru</a>
         <?php endforeach; ?>
+        <a class="btn btn-primary btn-block" href="admin/produk/jenis/form">Jenis Produk Baru</a>
         <br>
         <!-- Tambah <a href="/admin/produk/form/baru">jenis produk</a> baru -->
       </div>

@@ -45,6 +45,10 @@ $routes->get('admin/produk/form(:any)', 'admin\Produk::form$1', ['filter' => 'ro
 $routes->post('admin/produk/create', 'admin\Produk::create', ['filter' => 'role:admin']);
 $routes->post('admin/produk/update', 'admin\Produk::update', ['filter' => 'role:admin']);
 $routes->post('admin/produk/delete', 'admin\Produk::delete', ['filter' => 'role:admin']);
+
+$routes->get('admin/produk/jenis/form', 'admin\Produk::newJenis', ['filter' => 'role:admin']);
+$routes->post('admin/produk/jenis/create', 'admin\Produk::createJenis', ['filter' => 'role:admin']);
+
 $routes->get('admin/kriteria', 'admin\Kriteria', ['filter' => 'role:admin']);
 $routes->get('admin/kriteria/get_data', 'admin\Kriteria::get_data', ['filter' => 'role:admin']);
 $routes->post('admin/kriteria/create', 'admin\Kriteria::create', ['filter' => 'role:admin']);

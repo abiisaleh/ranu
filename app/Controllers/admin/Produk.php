@@ -154,4 +154,17 @@ class Produk extends BaseController
             exit('404 Not Found');
         }
     }
+
+    public function newJenis()
+    {
+        $data['title'] = 'Data Jenis Produk';
+        return view('pages/admin/produk/formJenis', $data);
+    }
+
+    public function createJenis()
+    {
+        $data = $this->request->getPost();
+        $this->jenisModel->insert($data);
+        return redirect()->to('admin/produk');
+    }
 }
