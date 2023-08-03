@@ -47,6 +47,7 @@ $routes->post('admin/produk/update', 'admin\Produk::update', ['filter' => 'role:
 $routes->post('admin/produk/delete', 'admin\Produk::delete', ['filter' => 'role:admin']);
 
 $routes->get('admin/produk/jenis/form', 'admin\Produk::newJenis', ['filter' => 'role:admin']);
+$routes->get('admin/produk/jenis/delete/(:num)', 'admin\Produk::deleteJenis/$1', ['filter' => 'role:admin']);
 $routes->post('admin/produk/jenis/create', 'admin\Produk::createJenis', ['filter' => 'role:admin']);
 
 $routes->get('admin/kriteria', 'admin\Kriteria', ['filter' => 'role:admin']);

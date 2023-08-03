@@ -167,4 +167,10 @@ class Produk extends BaseController
         $this->jenisModel->insert($data);
         return redirect()->to('admin/produk');
     }
+
+    public function deleteJenis($id)
+    {
+        $this->jenisModel->delete($id);
+        return redirect()->to('admin/produk');
+    }
 }
