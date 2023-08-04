@@ -9,42 +9,47 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <?= form_open_multipart('/admin/produk/'.$aksi, ['id' => 'produkForm']) ?>    
-      <div class="card-body">
-        <input type="hidden" value="<?= $jenisID ?>" name="fkJenis">
-        <input type="hidden" value="<?= ($produk) ? $produk['id'] : '' ?>" name="id">
-        <div class="form-group">
-          <label for="inputModel">Model</label>
-          <input type="text" class="form-control" id="inputModel" placeholder="masukkan model" name="model" value="<?= (!$produk) ? '' : $produk['model'] ?>">
-        </div>
-        <?php
-        $i = -1;
-        foreach ($kriteria as $Kriteria) :
-          $i++
-        ?>
-          <div class="form-group">
-            <label for="input<?= $Kriteria['nama'] ?>"><?= $Kriteria['nama'] ?></label>
-            <input type="text" class="form-control" id="input<?= $Kriteria['nama'] ?>" placeholder="Masukkan <?= $Kriteria['nama'] ?>" name="<?= strtolower(preg_replace('/\s+/', '_', $Kriteria['nama'])) ?>" value="<?= (!$produk) ? '' : $fitur[$i]['nilai'] ?>">
-          </div>
-        <?php endforeach; ?>
-        <div class="form-group">
-          <label for="inputGambar">Gambar</label>
-          <div class="input-group">
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGambar" name="gambar">
-              <label class="custom-file-label" for="inputGambar">Choose file</label>
-            </div>
-          </div>
-        </div>
+    <?= form_open_multipart('/admin/produk/' . $aksi, ['id' => 'produkForm']) ?>
+    <div class="card-body">
+      <input type="hidden" value="<?= $jenisID ?>" name="fkJenis">
+      <input type="hidden" value="<?= ($produk) ? $produk['id'] : '' ?>" name="id">
+      <div class="form-group">
+        <label for="inputModel">Model</label>
+        <input type="text" class="form-control" id="inputModel" placeholder="masukkan model" name="model" value="<?= (!$produk) ? '' : $produk['model'] ?>">
+      </div>
 
+      <div class="form-group">
+        <label for="inputstok">stok</label>
+        <input type="text" class="form-control" id="inputstok" placeholder="masukkan stok" name="stok" value="<?= (!$produk) ? '' : $produk['stok'] ?>">
+      </div>
+      <?php
+      $i = -1;
+      foreach ($kriteria as $Kriteria) :
+        $i++
+      ?>
         <div class="form-group">
-          <img id="preview-image" src="#" alt="Preview image" style="display: none;" width="200">
+          <label for="input<?= $Kriteria['nama'] ?>"><?= $Kriteria['nama'] ?></label>
+          <input type="text" class="form-control" id="input<?= $Kriteria['nama'] ?>" placeholder="Masukkan <?= $Kriteria['nama'] ?>" name="<?= strtolower(preg_replace('/\s+/', '_', $Kriteria['nama'])) ?>" value="<?= (!$produk) ? '' : $fitur[$i]['nilai'] ?>">
+        </div>
+      <?php endforeach; ?>
+      <div class="form-group">
+        <label for="inputGambar">Gambar</label>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGambar" name="gambar">
+            <label class="custom-file-label" for="inputGambar">Choose file</label>
+          </div>
         </div>
       </div>
-      <!-- /.card-body -->
-      <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+      <div class="form-group">
+        <img id="preview-image" src="#" alt="Preview image" style="display: none;" width="200">
       </div>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
     <?= form_close() ?>
   </div>
   <!-- /.card -->
@@ -90,14 +95,14 @@
   $('#navProduk').addClass('active')
 
   $(document).ready(function() {
-  $('#inputGambar').change(function() {
-    var file = $(this)[0].files[0];
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      $('#preview-image').attr('src', e.target.result).show();
-    };
-    reader.readAsDataURL(file);
-  });
-})
+    $('#inputGambar').change(function() {
+      var file = $(this)[0].files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $('#preview-image').attr('src', e.target.result).show();
+      };
+      reader.readAsDataURL(file);
+    });
+  })
 </script>
 <?= $this->endSection('script'); ?>
