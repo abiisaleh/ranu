@@ -55,7 +55,7 @@
         <?php foreach ($jenis as $Jenis) : ?>
           <div class="btn-group btn-block">
             <a class="btn btn-outline-primary col-10" href="admin/produk/form/<?= $Jenis['id'] ?>">Data <?= $Jenis['nama'] ?> Baru</a>
-            <a class="btn btn-outline-danger col-2" href="admin/produk/jenis/delete/<?= $Jenis['id'] ?>">hapus</a>
+            <a class="btn btn-danger col-2" href="admin/produk/jenis/delete/<?= $Jenis['id'] ?>"><i class="fas fa-trash"></i></a>
           </div>
         <?php endforeach; ?>
         <a class="btn btn-primary btn-block" href="admin/produk/jenis/form">Jenis Produk Baru</a>
