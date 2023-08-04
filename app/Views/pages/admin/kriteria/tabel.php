@@ -19,10 +19,10 @@
         <td><?= $Kriteria['nama'] ?></td>
         <td><?= $Kriteria['bobot'] ?></td>
         <td>
-          <?php 
-            foreach ($subkriteria->where('fkKriteria = '.$Kriteria['id'])->find() as $Subkriteria)
-              if ($Subkriteria)
-                echo '['.$Subkriteria['nama'].'] ';
+          <?php
+          foreach ($subkriteria->where('fkKriteria = ' . $Kriteria['id'])->find() as $Subkriteria)
+            if ($Subkriteria)
+              echo '[' . $Subkriteria['nama'] . '] ';
           ?>
         </td>
         <td>

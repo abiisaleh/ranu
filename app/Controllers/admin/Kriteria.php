@@ -33,7 +33,7 @@ class Kriteria extends BaseController
     public function get_data()
     {
         if ($this->request->isAJAX()) {
-            $id = $this->request->getPost('id');
+            $id = $this->request->getGet('id');
 
             $data = [
                 'Jenis' => $this->jenisModel->find($id),
