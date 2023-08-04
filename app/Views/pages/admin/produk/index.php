@@ -58,7 +58,7 @@
             <a class="btn btn-outline-danger col-2" href="admin/produk/jenis/delete/<?= $Jenis['id'] ?>">hapus</a>
           </div>
         <?php endforeach; ?>
-        <!-- <a class="btn btn-primary btn-block" href="admin/produk/jenis/form">Jenis Produk Baru</a> -->
+        <a class="btn btn-primary btn-block" href="admin/produk/jenis/form">Jenis Produk Baru</a>
         <br>
         <!-- Tambah <a href="/admin/produk/form/baru">jenis produk</a> baru -->
       </div>
