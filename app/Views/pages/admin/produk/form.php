@@ -19,7 +19,7 @@
       </div>
 
       <div class="form-group">
-        <label for="inputstok">stok</label>
+        <label for="inputstok">Stok</label>
         <input type="text" class="form-control" id="inputstok" placeholder="masukkan stok" name="stok" value="<?= (!$produk) ? '' : $produk['stok'] ?>">
       </div>
       <?php

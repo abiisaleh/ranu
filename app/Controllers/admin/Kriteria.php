@@ -171,7 +171,7 @@ class Kriteria extends BaseController
     {
         helper('form');
 
-        $id = $this->request->getGet('id');
+        $id = $this->request->getPost('id');
         $data = [
             'subkriteria' => $this->subkriteriaModel->find($id)
         ];
