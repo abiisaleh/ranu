@@ -2,8 +2,8 @@
   <thead>
     <tr>
       <th>Subkriteria</th>
-      <th style="width: 20%">Nilai</th>
-      <th>Aksi</th>
+      <th>Nilai</th>
+      <th style="width: 20%">Aksi</th>
     </tr>
   </thead>
   <tbody>

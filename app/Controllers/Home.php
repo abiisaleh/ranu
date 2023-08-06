@@ -174,10 +174,11 @@ class Home extends BaseController
         }
 
         foreach ($kriteria as &$Kriteria) {
+            $data['normalisasi'][] = $Kriteria['bobot'] / $total;
             $Kriteria['normalisasi'] = $Kriteria['bobot'] / $total;
         }
-        $data['kriteria'] = $kriteria; //perbarui data kriteria
-
+        $normalisasi = $kriteria;
+        $data['kriteria'] = $normalisasi; //perbarui data kriteria
 
         //Tahap 3 : Utility
         $data['alternatif'] = $result; //data alternatif
@@ -193,14 +194,17 @@ class Home extends BaseController
         }
 
         //cari nilai min & max
-        foreach ($kriteria as $Kriteria) {
+        foreach ($kriteria as $Kriterias) {
             $kualitatif = ['Fungsi', 'Ukuran', 'Merek', 'JenisKulkas', 'Tenaga'];
             $nilai = [];
+
+            $namakriteria = $Kriterias['nama'];
+            
             foreach ($result as $Result) {
-                if (!in_array($Kriteria['nama'], $kualitatif)) {
-                    $nilai[] = $Result[$Kriteria['nama']];
+                if (!in_array($namakriteria, $kualitatif)) {
+                    $nilai[] = $Result[$namakriteria];
                 } else {
-                    $konversi = $this->subkriteriaModel->join('kriteria', 'fkKriteria = kriteria.id')->where('fkJenis', $inputJenis)->where('subkriteria.nama', $Result[$Kriteria['nama']])->find();
+                    $konversi = $this->subkriteriaModel->join('kriteria', 'fkKriteria = kriteria.id')->where('fkJenis', $inputJenis)->where('subkriteria.nama', $Result[$namakriteria])->find();
                     $nilai[] = intval($konversi[0]['nilai']);
                 }
             }
@@ -209,23 +213,23 @@ class Home extends BaseController
             $Cmin = min($nilai);
 
             foreach ($result as &$Result) {
-                if (!in_array($Kriteria['nama'], $kualitatif)) {
-                    $Cout = $Result[$Kriteria['nama']];
+                if (!in_array($Kriterias['nama'], $kualitatif)) {
+                    $Cout = $Result[$Kriterias['nama']];
                 } else {
-                    $konversii = $this->subkriteriaModel->join('kriteria', 'fkKriteria = kriteria.id')->where('fkJenis', $inputJenis)->where('subkriteria.nama', $Result[$Kriteria['nama']])->find();
+                    $konversii = $this->subkriteriaModel->join('kriteria', 'fkKriteria = kriteria.id')->where('fkJenis', $inputJenis)->where('subkriteria.nama', $Result[$Kriterias['nama']])->find();
                     $Cout = intval($konversii[0]['nilai']);
                 }
 
                 if ($Cmax - $Cmin == 0) {
                     $utility = 0;
                 } else {
-                    if ($Kriteria['utility'] = "lebih kecil lebih baik") {
+                    if ($Kriterias['utility'] == "lebih kecil lebih baik") {
                         $utility = ($Cmax - $Cout) / ($Cmax - $Cmin);
                     } else {
                         $utility = ($Cout - $Cmin) / ($Cmax - $Cmin);
                     }
                 }
-                $Result['utility_' . $Kriteria['nama']] = $utility;
+                $Result['utility_' . $Kriterias['nama']] = $utility;
             }
         }
 
@@ -234,9 +238,9 @@ class Home extends BaseController
         foreach ($result as &$Result) {
             //nilaiAkhir = sum(bobot * normlisasi * utility) 
             $nilaiAkhir = 0;
-            foreach ($kriteria as $Kriteria) {
-                // if (!in_array($Kriteria['nama'], $kualitatif)) {
-                $nilaiAkhir = $nilaiAkhir + ($Kriteria['bobot'] * $Kriteria['normalisasi'] * $Result['utility_' . $Kriteria['nama']]);
+            foreach ($kriteria as $Kriteria2) {
+                // if (!in_array($Kriteria2['nama'], $kualitatif)) {
+                $nilaiAkhir = $nilaiAkhir + ($Kriteria2['normalisasi'] * $Result['utility_' . $Kriteria2['nama']]);
                 // }
             }
             $Result['nilai_akhir'] = $nilaiAkhir;
@@ -245,7 +249,7 @@ class Home extends BaseController
         $data['nilaiAkhir'] = $result; //nilai akhir
 
         usort($result, function ($a, $b) {
-            return $b['nilai_akhir'] * 100 - $a['nilai_akhir'] * 100;
+            return $b['nilai_akhir'] * 1000 - $a['nilai_akhir'] * 1000;
         });
 
         $data['nilaiAkhirSort'] = $result; //nilai akhir urutkan terbesar
@@ -255,7 +259,7 @@ class Home extends BaseController
         foreach ($result as $Result) {
             if ($Result == $resultMax) {
                 $data['hasil'][] = $Result;
-                $data['Produk'][] = $this->produkModel->join('jenis', 'fkJenis = jenis.id')->select('produk.id as id,merek,model,harga,jenis.nama as jenis')->find($Result['id']);
+                $data['Produk'][0] = $this->produkModel->join('jenis', 'fkJenis = jenis.id')->select('produk.id as id,merek,model,harga,jenis.nama as jenis')->find($Result['id']);
             }
         }
         //$data['hasil'] = $result[0]; //nilai akhir terbesar
